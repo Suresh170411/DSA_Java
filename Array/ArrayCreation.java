@@ -7,11 +7,21 @@ public class ArrayCreation {
         demo.araryDemo();
     }
 
+    // instantiate array and assigning values to it
     public void araryDemo(){
         int [] arr = new int [5];
+        // printArray(arr);
+
+        arr[0] = 3;
+        arr[1] = 4;
+        arr[2] = 6;
+        arr[3] = 1;
+        arr[4] = 2;
+
         printArray(arr);
     }
 
+    // printing all the elements of the array
     public void printArray(int arr []){
         int n = arr.length;
 
