@@ -6,10 +6,12 @@ public class ReverseArray {
     public static void main(String[] args) {
         int arr [] = {3,5,1,6,7};
         
-        reverseArraya(arr);
+        reverseArrayA(arr);
+        reverseArrayB(arr,0,arr.length-1);
     }
 
-    public static void reverseArraya(int [] arr){
+    // brute force approach
+    public static void reverseArrayA(int [] arr){
 
         int result [] = new int [arr.length];
         int index = 0;
@@ -19,5 +21,18 @@ public class ReverseArray {
         }
         
         System.out.println(Arrays.toString(result));
+    }
+
+    // in-place rotaion elements in an array
+    public static void reverseArrayB(int arr [], int start, int end){
+        while (start < end){
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+
+            start++;
+            end--;
+        }
+        System.out.println(Arrays.toString(arr));
     }
 }
