@@ -10,9 +10,9 @@ public class MoveZeroesToLeft {
 
     public static void moveZeroes(int [] arr){
         int n = arr.length;
-        int j = n-1;
+        int j = n-1; // j focous on zero elements
 
-        for (int i=n-1; i>=0; i--){
+        for (int i=n-1; i>=0; i--){    // i focous on non-zero elements
             if (arr[i] != 0 && arr[j] == 0){
                 int temp = arr[i];
                 arr[i] = arr[j];
