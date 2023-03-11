@@ -1,4 +1,4 @@
-package Array;
+
 
 public class FindMinAndMaxValue {
     public static void main(String[] args) {
