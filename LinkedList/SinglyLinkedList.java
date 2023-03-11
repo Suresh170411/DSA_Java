@@ -17,9 +17,12 @@ public class SinglyLinkedList {
        second.next = third; // 10 --> 1 --> 8
        third.next = fourth; // 10 --> 1 --> 8 --> 11 --> null
 
+       sll.addNodeBegin();
+
        sll.display();   // displaying all the data from the singly linked list
+       System.out.println(sll.getLength()); // length count of signly linked list
     }
-    
+
     private static class ListNode {
         private int data;
         private ListNode next;
@@ -30,6 +33,7 @@ public class SinglyLinkedList {
         }
     }
 
+    // traversal of singly linked list
     public void display(){
         ListNode current = head;
 
@@ -40,5 +44,23 @@ public class SinglyLinkedList {
         System.out.print("null");
     }
 
+    // length count of signly linked list
+    public int getLength(){
+        ListNode current = head;
+
+        int count = 0;
+        while (current != null){
+            count++;
+            current = current.next;
+        }
+        return count;
+    }
+
+    // add node to the begining
+    public void addNodeBegin(){
+        ListNode newNode = new ListNode(40);
+        newNode.next = head;
+        head = newNode;
+    }
 
 }
