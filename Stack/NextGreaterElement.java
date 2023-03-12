@@ -8,9 +8,8 @@ public class NextGreaterElement {
 
     // brute force approach for finding next greater element
     public static void nextGreaterBF(int [] arr){
-        int res;
         for (int i=0; i<arr.length; i++){
-            res = -1;
+            int res = -1;
             for (int j=i+1; j<arr.length; j++){
                 if (arr[i] < arr[j]){
                     res = arr[j];
@@ -21,5 +20,5 @@ public class NextGreaterElement {
         }
     }
 
-    
+
 }
