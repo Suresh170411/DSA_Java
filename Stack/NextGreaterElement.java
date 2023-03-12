@@ -8,6 +8,10 @@ public class NextGreaterElement {
         System.out.println(Arrays.toString(nextGreaterBF(arr)));
     }
 
+    public static int [] nextGreaterElement(int arr []){
+        return new int [8];
+    }
+
     // brute force approach for finding next greater element
     public static int [] nextGreaterBF(int [] arr){
         int n = arr.length; 
