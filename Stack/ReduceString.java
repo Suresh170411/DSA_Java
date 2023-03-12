@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public class ReduceString {
     public static void main(String[] args) {
-        String str = "aaabbbccd";
+        String str = "aabbcc";
         reduceString(str);
     }
     public static void reduceString(String str){
@@ -19,6 +19,10 @@ public class ReduceString {
                 st.push(arr[i]);
             }
         }
-        System.out.println(st);
+        if (st.isEmpty()){
+            System.out.println("Empty String");
+        }else {
+            System.out.println(st);
+        }
     }
 }
