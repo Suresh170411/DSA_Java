@@ -1,15 +1,36 @@
 package Stack;
 
 import java.util.Arrays;
+import java.util.Stack;
 
 public class NextGreaterElement {
     public static void main(String[] args) {
         int arr [] = {10,2,4,3,8,9,1};
         System.out.println(Arrays.toString(nextGreaterBF(arr)));
+        System.out.println(Arrays.toString(nextGreaterElement(arr)));
     }
 
     public static int [] nextGreaterElement(int arr []){
-        return new int [8];
+        
+        int n = arr.length;
+
+        int res [] = new int [n];
+        Stack<Integer> st = new Stack<>();
+
+        for (int i=n-1; i>=0; i--){
+            if (!st.isEmpty()){
+                while(!st.isEmpty() && st.peek() <= arr[i]){
+                    st.pop();
+                }
+            }
+            if (st.isEmpty()){
+                res[i] = -1;
+            }else {
+                res[i] = st.peek();
+            }
+            st.push(arr[i]);
+        }
+        return res;
     }
 
     // brute force approach for finding next greater element
