@@ -7,6 +7,11 @@ public class StockSpan {
         int arr [] = {100,80,60,70,60,75,85};
         bruteForceApproach(arr);
     }
+
+    public static void stockSpanPrint(int arr []){
+        
+    }
+
     public static void bruteForceApproach(int arr []){
         int n = arr.length;
 
