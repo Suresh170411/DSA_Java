@@ -16,18 +16,19 @@ public class PreviousGreaterElement {
         int res [] = new int [n];
         Stack<Integer> st = new Stack<>();
 
-        for (int i=0; i<n; i++){
+        res[0] = -1;
+        st.push(0);
+
+        for (int i=1; i<n; i++){
+            while (!st.isEmpty() && arr[st.peek()] > arr[i]){
+                st.pop();
+            }
             if (!st.isEmpty()){
-                while(!st.isEmpty() && st.peek() >= arr[i]){
-                    st.pop();
-                }
-            }
-            if (st.isEmpty()){
-                res[i] = -1;
+                res[i] = arr[st.peek()];
             }else {
-                res[i] = st.peek();
+                res[i] = -1;
             }
-            st.push(arr[i]);
+            st.push(i);
         }
         return res;
     }
@@ -38,7 +39,7 @@ public class PreviousGreaterElement {
         for (int i=n-1; i>=0; i--){
             int res = -1;
             for (int j=i-1; j>=0; j--){
-                if (arr[i] < arr[j]){
+                if (arr[i] > arr[j]){
                     res = arr[j];
                     break;
                 }
