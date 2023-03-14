@@ -8,6 +8,7 @@ public class NextGreaterElement {
         int arr [] = {10,2,4,3,8,9,1};
         System.out.println(Arrays.toString(nextGreaterBF(arr)));
         System.out.println(Arrays.toString(nextGreaterElement(arr)));
+        optimizedStackApproach(arr);
     }
 
     public static int [] nextGreaterElement(int arr []){
@@ -31,6 +32,29 @@ public class NextGreaterElement {
             st.push(arr[i]);
         }
         return res;
+    }
+
+    public static void optimizedStackApproach(int arr []){
+        int n = arr.length;
+
+        int res [] = new int [n];
+        Stack<Integer> st = new Stack<>();
+
+        res[n-1] = -1;
+        st.push(0);
+
+        for (int i=n-2; i>=0; i--){
+            while (!st.isEmpty() && arr[st.peek()] < arr[i]){
+                st.pop();
+            }
+            if (!st.isEmpty()){
+                res[i] = arr[st.peek()];
+            }else {
+                res[i] = -1;
+            }
+            st.push(i);
+        }
+        System.out.println(Arrays.toString(res));
     }
 
     // brute force approach for finding next greater element
