@@ -1,6 +1,7 @@
 package Stack;
 
 import java.util.Arrays;
+import java.util.Stack;
 
 public class NextGreater {
     public static void main(String[] args) {
@@ -36,17 +37,23 @@ public class NextGreater {
     }
 
     public static int [] nextGreaterElementLeft(int [] arr){
-        int res [] = new int [arr.length];
         int n = arr.length;
+        int res [] = new int [n];
+        Stack<Integer> st = new Stack<>();
 
-        for (int i=n-1; i>=0; i--){
-            int fix = -1;
-            for (int j=i-1; j>=0; j--){
-                if (arr[i] < arr[j]){
-                    fix = arr[j];
-                }
+        res[0] = -1;
+        st.push(0);
+
+        for (int i=1; i<n; i++){
+            while (!st.isEmpty() && arr[st.peek()] >= arr[i]){
+                st.pop();
             }
-            res[i] = fix;
+            if (!st.isEmpty()){
+                res[i] = arr[st.peek()];
+            }else {
+                res[i] = -1;
+            }
+            st.push(i);
         }
         return res;
     }
