@@ -1,6 +1,16 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class SortList {
     public static void main(String[] args) {
-        
+     
+        List<Student> list = new ArrayList<>();
+
+        list.add(new Student(10,"Suresh",430));
+        list.add(new Student(20,"Priti",500));
+        list.add(new Student(30,"Jayashree",480));
+        list.add(new Student(40,"Mohit",320));
+        list.add(new Student(50,"Harsh",360));
     }
 }
 
