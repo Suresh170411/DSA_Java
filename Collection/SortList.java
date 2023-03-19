@@ -15,15 +15,19 @@ public class SortList {
         list.add(new Student(50,"Harsh",360));
 
         
-
-        for (Student s : list){
-            System.out.println(s);
-        }
+        sortListByLE(list);
+        System.out.println("===================================");
+        sortListByComparator(list);
+        
     }
 
     // Sorting a list using Lambda Expression
     public static void sortListByLE(List<Student> list){
         Collections.sort(list,(s1,s2)-> s1.getMarks() > s2.getMarks() ? +1 : -1);
+
+        for (Student s : list){
+            System.out.println(s);
+        }
     }
 
     // Sorting a list using Comparator
@@ -32,10 +36,14 @@ public class SortList {
 
             @Override
             public int compare(Student o1, Student o2) {
-                return o1.getMarks() > o2.getMarks() ? +1 : -1;
+                return o1.getMarks() < o2.getMarks() ? +1 : -1;
             }
             
         });
+
+        for (Student s : list){
+            System.out.println(s);
+        }
     }
 }
 
