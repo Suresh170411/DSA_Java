@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class SortList {
@@ -11,6 +12,12 @@ public class SortList {
         list.add(new Student(30,"Jayashree",480));
         list.add(new Student(40,"Mohit",320));
         list.add(new Student(50,"Harsh",360));
+
+        Collections.sort(list,(s1,s2)-> s1.getMarks() > s2.getMarks() ? +1 : -1);
+
+        for (Student s : list){
+            System.out.println(s);
+        }
     }
 }
 
