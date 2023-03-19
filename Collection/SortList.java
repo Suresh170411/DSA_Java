@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class SortList {
@@ -13,11 +14,28 @@ public class SortList {
         list.add(new Student(40,"Mohit",320));
         list.add(new Student(50,"Harsh",360));
 
-        Collections.sort(list,(s1,s2)-> s1.getMarks() > s2.getMarks() ? +1 : -1);
+        
 
         for (Student s : list){
             System.out.println(s);
         }
+    }
+
+    // Sorting a list using Lambda Expression
+    public static void sortListByLE(List<Student> list){
+        Collections.sort(list,(s1,s2)-> s1.getMarks() > s2.getMarks() ? +1 : -1);
+    }
+
+    // Sorting a list using Comparator
+    public static void sortListByComparator(List<Student> list){
+        Collections.sort(list, new Comparator<Student>() {
+
+            @Override
+            public int compare(Student o1, Student o2) {
+                return o1.getMarks() > o2.getMarks() ? +1 : -1;
+            }
+            
+        });
     }
 }
 
