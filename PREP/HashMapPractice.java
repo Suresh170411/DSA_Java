@@ -11,8 +11,6 @@ public class HashMapPractice {
     public static void printFreq(int arr []){
         Map<Integer,Integer> hm = new HashMap<>();
 
-        int n = arr.length;
-
         for (int i : arr){
             if (hm.containsKey(i)){
                 hm.put(i, hm.get(i)+1);
