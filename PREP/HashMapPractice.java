@@ -6,6 +6,7 @@ public class HashMapPractice {
         int arr [] = {3,25,1,6,8,9,12,9,3,1};
 
         printFreq(arr);
+        printHM(arr);
     }
 
     public static void printFreq(int arr []){
@@ -21,6 +22,18 @@ public class HashMapPractice {
         
         for (Map.Entry<Integer,Integer> e : hm.entrySet()){
             System.out.println(e.getKey() +"=="+e.getValue());
+        }
+    }
+    public static void printHM(int arr []){
+
+        HashMap<Integer,Integer> hm = new HashMap<>();
+
+        for (int i : arr){
+            hm.put(i, hm.getOrDefault(i,0)+1);
+        }
+
+        for (Integer i : hm.keySet()){
+            System.out.println(i + "==" + hm.get(i));
         }
     }
 }
