@@ -5,6 +5,7 @@ public class Problem1 {
         
         printStars(5, 4);
         printChars(5, 4);
+        printNums(5, 4);
         
     }
     public static void printStars(int row, int column){
@@ -23,6 +24,16 @@ public class Problem1 {
             for (int j=1; j<=column; j++){
                 System.out.print(str.charAt(count)+" ");
                 count++;
+            }
+            System.out.println();
+        }
+    }
+
+    public static void printNums(int row, int column){
+        int count = 0;
+        for (int i=1; i<=row; i++){
+            for (int j=1; j<=column; j++){
+                System.out.print(++count+" ");
             }
             System.out.println();
         }
