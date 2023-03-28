@@ -9,6 +9,19 @@ package StarPrinting;
 
 public class Problem2 {
     public static void main(String[] args) {
-        
+        printStars(4);
+    }
+    public static void printStars(int size){
+
+        for (int i=0; i<size; i++){
+            for (int j=0; j<size; j++){
+                if (i==0 || i==size-1 || j==0 || j==size-1){
+                    System.out.print(" * ");
+                }else {
+                    System.out.print("   ");
+                }
+            }
+            System.out.println();
+        }
     }
 }
