@@ -8,6 +8,7 @@ public class NearestSmallerElementLeft {
         int arr [] = {7,2,4,6,9,3,8,11};  // --> [-1, -1, 2, 4, 6, 2, 3, 8] answer output
         nearestSmaller(arr);
         bruteForceApproach(arr);
+        nearestSmallerLeft(arr);
     }
     public static void nearestSmaller(int arr []){
         int n = arr.length;
@@ -42,5 +43,27 @@ public class NearestSmallerElementLeft {
             ans[i] = res;
         }
         System.out.println(Arrays.toString(ans));
+    }
+
+    public static void nearestSmallerLeft(int arr []){
+        int n = arr.length;
+
+        Stack<Integer> st = new Stack<>();
+        int res [] = new int [n];
+
+        for (int i=0; i<n; i++){
+            while (!st.isEmpty() && arr[i] <= st.peek()){
+                st.pop();
+            }
+
+            if (st.isEmpty()){
+                res[i] = -1;
+            }else {
+                res[i] = st.peek();
+            }
+
+            st.push(arr[i]);
+        }
+        System.out.println(Arrays.toString(res));
     }
 }
