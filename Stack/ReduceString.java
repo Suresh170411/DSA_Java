@@ -34,7 +34,7 @@ public class ReduceString {
         }
     }
 
-    // reduce String brure force approach
+    // reduce String brute force approach
     public static String bruteForceApproach(String str){
 
         StringBuilder sb = new StringBuilder(str);
