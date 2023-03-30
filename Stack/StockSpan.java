@@ -8,6 +8,8 @@ public class StockSpan {
         int arr [] = {100,80,60,70,60,75,85};
         bruteForceApproach(arr);
         stockSpanPrint(arr);
+        stockSpanOptimizedApproach(arr);
+
     }
 
     public static void stockSpanPrint(int arr []){
@@ -46,6 +48,28 @@ public class StockSpan {
             }
             res[i] = count;
         }
+        System.out.println(Arrays.toString(res));
+    }
+
+    public static void stockSpanOptimizedApproach(int arr []){
+        int res [] = new int [arr.length];
+
+        Stack<Integer> st = new Stack<>();
+
+        res[0] = 1;
+        st.push(0);
+
+        for (int i=1; i<arr.length; i++){
+            int x = arr[i];
+
+            while (!st.isEmpty() && arr[st.peek()] <= x){
+                st.pop();
+            }
+            res[i] = st.isEmpty() ?  i+1 : i-st.peek();
+
+            st.push(i);
+        }
+
         System.out.println(Arrays.toString(res));
     }
 }
