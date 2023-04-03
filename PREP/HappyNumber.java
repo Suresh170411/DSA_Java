@@ -37,6 +37,7 @@ public class HappyNumber {
         return sum;
     }
 
+    // happy number checking method
     public static boolean isHappyNumber(int n){
         HashSet<Integer> st = new HashSet<>();
 
