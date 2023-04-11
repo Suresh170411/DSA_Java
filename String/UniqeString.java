@@ -4,14 +4,15 @@ public class UniqeString {
 
     public static void main(String[] args) {
         String str = "masai";
-        boolean res = stackPractice(str);
+        boolean res = uniqueStrCheck(str);
         if (res){
             System.out.println("YES");
         }else {
             System.out.println("NO");
         }
     }
-    public static boolean stackPractice(String str){
+    // unique string check method
+    public static boolean uniqueStrCheck(String str){
 
         HashMap<Character,Integer> hm = new HashMap<>();
 
