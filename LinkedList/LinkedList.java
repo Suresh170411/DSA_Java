@@ -22,6 +22,11 @@ public class LinkedList {
         size++;
     }
 
+    // Removing one node from the begining
+    public void removeFirst(){
+        head = head.next;
+    }
+
     class Node{
         int data;
         Node next;
@@ -47,6 +52,10 @@ public class LinkedList {
         list.add(2);
         list.add(3);
         list.add(4);
+
+        list.printList(list.head);
+
+        list.removeFirst();
 
         list.printList(list.head);
     }
