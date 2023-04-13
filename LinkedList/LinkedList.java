@@ -24,6 +24,10 @@ public class LinkedList {
 
     // Removing one node from the begining
     public void removeFirst(){
+        if (head == null){
+            System.out.println("List is Empty !");
+            return;
+        }
         head = head.next;
     }
 
