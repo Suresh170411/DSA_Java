@@ -26,9 +26,11 @@ public class LinkedList {
     public void removeFirst(){
         if (head == null){
             System.out.println("List is Empty !");
-            return;
+        }else {
+            head = head.next;
+            size--;
         }
-        head = head.next;
+        
     }
 
     class Node{
