@@ -10,6 +10,7 @@ public class LinkedList {
         size = 0;
     }
 
+    // Add method for linkedList
     public void add(int data){
         Node n = new Node(data);
         if (head == null){
@@ -31,9 +32,22 @@ public class LinkedList {
         }
     }
 
+    // Print linkedList data
+    void printList(Node head){
+        while (head != null){
+            System.out.print(head.data+" ");
+            head = head.next;
+        }
+        System.out.println();
+    }
     public static void main(String[] args) {
         LinkedList list = new LinkedList();
 
-        
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(4);
+
+        list.printList(list.head);
     }
 }
