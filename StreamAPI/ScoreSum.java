@@ -19,6 +19,10 @@ public class ScoreSum {
         Team kkr = new Team();
         kkr.setPlayers(players);
 
+        // Get total marks of the team
         System.out.println("Total Score of KKR is : "+kkr.getTotalScore());
+
+        // getting total batsman / bowler
+        System.out.println(kkr.givePlayerBySkillSet());
     }
 }
