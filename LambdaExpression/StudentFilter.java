@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 public class StudentFilter {
     public static void main(String[] args) {
@@ -34,5 +35,10 @@ public class StudentFilter {
         for (Student s : students){
             System.out.println(s);
         }
+
+        // test method check --> public boolean test(Object obj);
+
+        Predicate<Student> p = s -> s.getMarks() > 500;
+        System.out.println(p.test(new Student(40, "Suresh", 540)));
     }
 }
