@@ -12,6 +12,23 @@ public class StudentFilter {
         students.add(new Student(50, "Ganesh", 510));
         students.add(new Student(60, "Lokesh", 490));
 
+
+        // public boolean removeIf(Predicate filter);
+        /**
+         * class MyPredicate implements Predicate<Student>{
+         *      
+         *  @Override
+         *  public boolean removeIf(Student s){
+         *      return s.getMarks() > 500;
+         *  }
+         * }
+         */
+
+         /**
+          * students.removeIf(s -> {
+                return s.getMarks() > 500;
+          });
+          */
         students.removeIf(s -> s.getMarks() < 500);
 
         for (Student s : students){
