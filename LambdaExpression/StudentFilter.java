@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 public class StudentFilter {
@@ -43,5 +44,22 @@ public class StudentFilter {
 
         Predicate<Student> p = s -> s.getMarks() > 500;
         System.out.println(p.test(new Student(40, "Suresh", 540)));
+
+
+        // USING CONSUMER ------------>
+
+        // using external class
+        Consumer<Student> c = new MyConsumer();
+        c.accept(new Student(10, "Suresh", 400)); 
+
+        System.out.println("=====================");
+
+        // using LE
+        Consumer<Student> le = s ->{
+            System.out.println("Roll : " + s.getRoll());
+            System.out.println("Name : " + s.getName());
+            System.out.println("Mark : " + s.getMarks());
+        };
+        le.accept(new Student(20, "Priti", 500));
     }
 }
