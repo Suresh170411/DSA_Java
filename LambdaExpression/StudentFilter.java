@@ -24,6 +24,9 @@ public class StudentFilter {
          *  }
          * }
          */
+        
+         // using external implemented class
+        students.removeIf(new MyPredicate());
 
          /**
           * students.removeIf(s -> {
