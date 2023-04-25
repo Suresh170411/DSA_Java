@@ -36,9 +36,7 @@ public class StudentFilter {
           */
         students.removeIf(s -> s.getMarks() < 500);
 
-        for (Student s : students){
-            System.out.println(s);
-        }
+        students.forEach(s -> System.out.println(s));
 
         // test method check --> public boolean test(Object obj);
 
