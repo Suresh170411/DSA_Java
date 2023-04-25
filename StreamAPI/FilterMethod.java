@@ -28,16 +28,24 @@ public class FilterMethod {
         */
 
         // it has been stored in another List
-        students.stream()
-        .filter(s->s.getMarks() > 500)
-        .collect(Collectors.toList())
-        .forEach(s ->{
+        List<Student> filterdList = students.stream()
+                                    .filter(s->s.getMarks() > 500)
+                                    .collect(Collectors.toList());
+        
+        students.forEach(s -> {
             System.out.println("ROLL : " + s.getRoll());
             System.out.println("NAME : " + s.getName());
             System.out.println("MARK : " + s.getMarks());
             System.out.println("=============");
         });
 
-        
+        System.out.println("xxxxxxxxxxxxxxxxxx");
+
+        filterdList.forEach(s -> {
+            System.out.println("ROLL : " + s.getRoll());
+            System.out.println("NAME : " + s.getName());
+            System.out.println("MARK : " + s.getMarks());
+            System.out.println("=============");
+        });
     }
 }
