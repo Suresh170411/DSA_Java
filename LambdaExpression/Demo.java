@@ -27,5 +27,11 @@ public class Demo{
 
         System.out.println(res);
 
+        // using Lambda Expression checking Function Interface
+        Function<Student,String> function = stu -> stu.getMarks() > 500 ? "Pass" : "Fail";
+
+        String result = function.apply(new Student(40, "Pritismita", 530));
+
+        System.out.println(result);
     }
 }
