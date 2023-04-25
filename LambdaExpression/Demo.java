@@ -2,6 +2,8 @@ import java.util.function.Supplier;
 
 public class Demo{
     public static void main(String[] args) {
+
+        //using external class
         Supplier<String> s = new MySupplier();
         String str = s.get();
         System.out.println(str);
