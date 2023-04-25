@@ -1,3 +1,4 @@
+import java.util.function.Function;
 import java.util.function.Supplier;
 
 public class Demo{
@@ -18,5 +19,13 @@ public class Demo{
         System.out.println(student.get().getRoll());
         System.out.println(student.get().getName());
         System.out.println(student.get().getMarks());
+
+        // Checking for Function Interface which is having only one method --> (apply)
+        Function<Student,String> func = new MyFunction();
+
+        String res = func.apply(new Student(20, "Suresh", 540));
+
+        System.out.println(res);
+
     }
 }
