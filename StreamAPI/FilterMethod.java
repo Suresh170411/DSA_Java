@@ -2,6 +2,7 @@ package StreamAPI;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 // intermediate method
 public class FilterMethod {
@@ -26,7 +27,11 @@ public class FilterMethod {
         });
         */
 
-        students.stream().filter(s->s.getMarks() > 500).forEach(s->{
+        // it has been stored in another List
+        students.stream()
+        .filter(s->s.getMarks() > 500)
+        .collect(Collectors.toList())
+        .forEach(s ->{
             System.out.println("ROLL : " + s.getRoll());
             System.out.println("NAME : " + s.getName());
             System.out.println("MARK : " + s.getMarks());
