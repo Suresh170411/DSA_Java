@@ -1,7 +1,7 @@
 Foumula:
 =======
 
-nPr = n!/(n-r)!
+1) nPr = n!/(n-r)!
 
 Pointers to Remember
 ====================
