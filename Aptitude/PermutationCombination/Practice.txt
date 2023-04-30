@@ -119,7 +119,7 @@ Q) How many ways a 3-digit no can be formed using 8,9,0
 =================================================================================================
 
 Words Type-1 : Repeated & Non-Repeated Letters
-----------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Non-Repeated Letters
 --------------------
@@ -144,3 +144,77 @@ Q) Number of ways a word can be arranged
 > LAPTOP --> 6! / 2!  (Because 'P' is repeated for 2 times therefore 2!)
 > MISSISSIPPI --> 11! / (4! * 4! * 2!)  (Because 'I' is repeated for 4, 'S' for 4 and 'P' for 2 times)
 > APTITUDE --> 8! / 2! (Because 'T' is repeated for 2 times therefore 2!)
+
+
+=================================================================================================
+
+Words Type-2 : Repetition Allowed & Repetition Not Allowed
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+● AB
+  - AA
+  - AB
+  - BB
+  - BA
+
+Foumula : 2²
+Explanation : • Here 2 is no of letters
+              • ² is for repetition
+
+
+● SHIRT  --> 5⁵
+
+Repetition is Allowed but have Repeated Letters
+-----------------------------------------------
+● APTITUDE
+
+Foumula : 8⁸ / 2!
+Explanation : • Here 8 is no of letters
+              • ⁸ is for repetition
+              • 2! because letter 'T' is repeated for 2 times
+
+
+
+
+Words Type-3 : Always Together (Vowels, Consonants, Group of Words)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+(a) Vowels Always Together
+--------------------------
+
+Q) How many words can be fromed when Vowels are always together ?
+
+● LEARN                 (Vowels --> EA)
+  
+  _ L _ R _ N _         
+
+  Foumula : 4! * 2!
+  Explanation : • 4! is for places where we can place AE/EA
+                • 2! is for number of vowels we have in the word (EA)
+
+
+
+● APTITUDE             (vowels --> AIUE)
+
+ _ P _ T _ T _ D _
+
+ Foumula : (5! / 2!) * 4!
+ Explanation : • 5! is for places where we can place AIUE
+               • 2! is for number repeated words for 'T' which is 2
+               • 4! is for number of vowels we have in the word (AIUE)
+
+
+
+(b) Consonants Always Together
+------------------------------
+
+Q) How many words can be fromed when Consonants are always together ?
+
+● LEGAL                 (Consonants --> LGL)
+ 
+ _ E _ A _
+
+ Foumula : 3! * (3! / 2!)
+ Explanation : • First 3! is for places where we can place LGL
+               • Second 3! is for number of consonants we have in the word (LGL)
+               • 2! is for number repeated words for 'L' which is 2
