@@ -30,3 +30,25 @@ Q) 7 letters A,B,C,D,E,F,G in 4 spaces
       = 7! / 3! 
       = 5040 / 6 
       = 840
+
+
+Basics
+======
+
+2 Types
+      - Number
+      - Words
+
+Number
+------
+      - Zero
+      - Non-Zero
+
+Words
+-----
+      - Repeated & Non Repeted Letters
+      - Repetition Allowed & Repetition Not Allowed
+      - Always Together (Vowels, Consonants, Group of Words)
+      - Never Together
+      - Odd & Even places
+      - No 'Two' Together
