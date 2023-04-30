@@ -2,6 +2,9 @@ Foumula:
 =======
 
 1) nPʀ = n!/(n-r)!
+      > n = total number of letters in a word
+      > r = no_of_digit needs to build (2-digit, 3-digit etc.)
+
 2) (Number Of Letters)!
 
 Pointers to Remember
@@ -19,7 +22,7 @@ Problems
 
 Q) 4 letters A,B,C,D in 3 spaces
 
-> nPr = 4! / (4-3)! 
+> nPr = 4! / (4-3)!
       = 4! / 1! 
       = 4! 
       = 4*3*2*1 
@@ -177,7 +180,7 @@ Explanation : • Here 8 is no of letters
 
 
 Words Type-3 : Always Together (Vowels, Consonants, Group of Words)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 (a) Vowels Always Together
 --------------------------
@@ -218,3 +221,187 @@ Q) How many words can be fromed when Consonants are always together ?
  Explanation : • First 3! is for places where we can place LGL
                • Second 3! is for number of consonants we have in the word (LGL)
                • 2! is for number repeated words for 'L' which is 2
+
+
+● LEARN                 (Consonants --> LRN)
+
+ _ E _ A _
+
+ Foumula : 3! * 3!
+ Explanation : • First 3! is for places where we can place LGL
+               • Second 3! is for number of consonants we have in the word (LGL)
+
+
+
+
+
+Words Type-4 :  Never Together (Vowels, Consonants, Group of Words)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+(a) Vowels are not together
+---------------------------
+
+
+● LEARN           (vowel --> EA)
+
+      _ L _ R _ N _
+
+ Foumula : (TNW - AT) --> 5! - (4! * 2!)
+                          = 120 - (24*2)
+                          = 120 - 48
+                          = 72
+
+ Explanation : • Total number of ways (TNW) possible is (total number of letter)! --> 5!
+               • Always together (AT)  _ L _ R _ N _ (4! * 2!) --> (because EA is the vowel so 2!)
+
+
+● SISTER           (vowel --> IE)
+
+      _ S _ S _ T _ R _
+
+ Foumula : (TNW - AT) --> (6! / 2!) - (5! * 2!) / 2!
+                          = (6! / 2!) - 5!
+                          = ( 720 / 2 ) - 120
+                          = 360 - 120
+                          = 240
+
+ Explanation : • Total number of ways (TNW) possible is (total number of letter)! / (total repeated letter)!
+                 --> 6! / 2!
+                        - 6! because no of letters in the word is 6
+                        - 2! because for letter 'S' is repeated for 2 times
+
+               • Always together (AT)  _ S _ S _ T _ R _ (5! * 2!) / 2!
+                        - 5! because 5 places where we can put 'IE'
+                        - 2! because IE is the vowel (first)
+                        - 2! because in (S S T R) letter 'S' is repeated for 2 times so ( /2! )
+
+
+
+(b) Consonants are not together
+-------------------------------
+
+● LEARN           (consonants --> LRN)
+
+      _ E _ A _
+
+ Foumula : (TNW - AT) --> 5! - (3! * 3!)
+                          = 120 - (6 * 6)
+                          = 120 - 36
+                          = 84
+
+ Explanation : • Total number of ways (TNW) possible is (total number of letter)!  --> 5!
+
+               • Always together (AT)  _ E _ A _ (3! * 3!)
+                        - 3! because 3 places where we can put 'LRN'    (first)
+                        - 3! because number of letters in consonants are 3 (LRN)
+
+
+
+
+
+
+Words Type-5 : Odd & Even places
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+(a) Vowels at ODD position
+--------------------------
+
+Q) How many ways word "FRIDGE" can be arranged in such a way that vowels occupy only ODD position ?
+
+● FRIDGE    (vowel --> IE) 
+            (remaining --> FRDG)
+
+      _ _ _ _ _ _       (odd positions --> 1,3,5)
+      1 2 3 4 5 6
+ 
+ • We have only 3 odd positions where we can place vowels (IE)
+ • So the formula is --> 3P₂ * (no of remaining letters)!
+
+ Foumula : 3P₂ * ((no of remaining letters)! --> (FRDG)) -->  ( 3! / (3-2)! ) * 4!
+                   = ( 3!/1! ) * 4!
+                   = 3! * 4!
+                   = 6 * 24
+                   = 144
+
+ Explanation : 3P₂ * 4!
+              • Here 3 is for 3 position where we can place vowels IE
+              • ² is because the formula --> nPr here (no of letters is 2 --> IE)
+              • 4! for factorial of no remaining letters after the vowel IE which is --> FRDG
+
+
+
+
+(b) Vowels at EVEN position
+--------------------------
+
+Q) How many ways word "APTITUDE" can be arranged in such a way that vowels occupy only EVEN position ?
+
+● APTITUDE    (vowel --> AIUE) 
+              (remaining --> PTTD)
+
+      _ _ _ _ _ _ _ _
+      1 2 3 4 5 6 7 8         (Even positions --> 2,4,6,8)
+
+ • We have only 4 even positions where we can place vowels (AIUE)
+ • So the formula is --> 4P₄ * (no of remaining letters)!
+ 
+
+ Foumula : 4P₄ * ((no of remaining letters)! --> (PTTD)) -->
+            = ((4!/0!)/2!) * (4!/2!)
+            = (4!/2!) * (4!/2!)
+            = (24/2) * (24/2)
+            = 12 * 12
+            = 144
+
+ Explanation : (4P₄/2!) * (4!/2!)
+              • Here 4 is for 4 position where we can place vowels AIUE
+              • ₄ is because the formula --> nPr here (no of letters is 4 --> AIUE)
+              • 2! is because in word "APTITUDE" letter 'T' is repeated for 2 times
+              • 4! for factorial of no remaining letters after the vowel AIUE which is --> PTTD
+              • 2! is because in remaining word "PTTD" letter 'T' is repeated for 2 times
+
+
+
+
+
+
+Words Type-6 : No 'Two' Together
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Q) How many ways the word "FRIDGE" can be arranged such that no two vowel are together ?
+
+● FRIDGE    (vowel --> IE)
+            (remaining --> FRDG)
+
+      _ F _ R _ D _ G _
+
+ 
+ Foumula : 5P₂ * 4!
+            = (5!/3!) * 4!
+            = (120/6) * 24
+            = 20 * 24
+            = 480
+
+ Explanation : 5P₂ * 4!
+              • Here 5 is for 5 position where we can place vowels IE
+              • ₂ is because the formula --> nPr here (no of letters is 2 --> IE)
+              • 4! for factorial of no remaining letters after the vowel IE which is --> FRDG
+
+
+
+● PLACES    (vowel --> AE)
+            (remaining --> PLCS)
+
+      _ P _ L _ C _ S _
+
+
+ Foumula : 5P₂ * 4!
+            = (5!/3!) * 4!
+            = (120/6) * 24
+            = 20 * 24
+            = 480
+
+ Explanation : 5P₂ * 4!
+              • Here 5 is for 5 position where we can place vowels AE
+              • ₂ is because the formula --> nPr here (no of letters is 2 --> AE)
+              • 4! for factorial of no remaining letters after the vowel IE which is --> PLCS
