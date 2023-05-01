@@ -98,6 +98,7 @@ Q) How many ways a 3-digit no can be formed using 7,8,9,9,4
 
 With Zero
 ---------
+If numbers and digits are same-------------------------->
 
 Q) How many ways a 4-digit no can be formed using 0,1,2,3
 
@@ -119,6 +120,24 @@ Q) How many ways a 3-digit no can be formed using 8,9,0
           = 4
 
 
+If numbers and digits are not same-------------------------->
+
+Q) How many ways a 2-digit no can be formed using 0,1,2,3
+
+> 1 _       12    21    32          (total --> 9)
+  2 _       13    23    31
+  3 _       10    20    30
+  0 _
+
+Q) How many ways a 3-digit no can be formed using 0,1,2,3
+
+> 1 _ _      123  213   312         (total --> 18)
+  2 _ _      120  210   310
+  3 _ _      132  231   321
+  0 _ _      130  230   320
+             102  201   301
+             103  203   302
+         
 =================================================================================================
 
 Words Type-1 : Repeated & Non-Repeated Letters
