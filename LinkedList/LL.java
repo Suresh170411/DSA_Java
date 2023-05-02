@@ -40,7 +40,10 @@ public class LL {
         currentNode.next = node;
     }
 
-    public void printNode(Node data){
+    public void printNode(){
+
+        Node data = head;
+
         if (data == null){
             return;
         }
@@ -60,6 +63,6 @@ public class LL {
         list.addFirst(3);
         list.addFirst(4);
         list.addLast(30);
-        list.printNode(list.head);
+        list.printNode();
     }
 }
