@@ -1,0 +1,84 @@
+Pointers to Remember:
+--------------------
+
+    PAST            PRESENT             FUTURE
+15 yrs ago             X                15 years
+  (x-15)                                 (x+15)
+
+
+
+Q) Krishna's age after 15 years will be 5 times his age 5 years back. What is the present age of Krishna ?
+
+> let, present age of Krishna = X
+  After 15 years = x+15
+  5 times of his age 5 years back = 5 (x-5)
+
+  so equation will be :
+    
+      x + 15 = 5 (x-5)
+   => x + 15 = 5x - 25
+   => 15 + 25 = 5x - X
+   => 4x = 40
+   => x = 40/4 = 10
+
+∴ age of Krishna is 10.
+
+
+
+
+Q) A is 2 years older than B who is twice as old as C. The total ages of A,B,C be 27. How old is B ?
+
+> let age of C = X
+  age of A is = B+2
+  age of B is = 2C = 2X
+
+  total age =  A + B + C = 27
+            => (2x + 2) + 2X + X = 27
+            => 5X + 2 = 27
+            => 5X = 27-2
+            => X = 25/5 = 5
+
+  age of B = 2X = 2*5 = 10
+
+  ∴ age of B is 10.
+
+
+
+
+
+Q) Present age of Sameer and Anand are the ration of 5 : 4.
+   3 years hense their ratio will become 11 : 9 respectively.
+   What is Anand's present age ?
+
+
+> let age of Sameer = 5x + 3 = 11
+  age of Anand = 4x + 3 = 9
+
+  (5x + 3) / (4x + 3) = 11 / 9
+=> 9 (5x + 3) = 11 (4x + 3)
+=> 45x + 27 = 44x + 33
+=> 45x - 44x = 33 - 27
+=> x = 6
+
+∴ present age of Anand is 4x = 24.
+
+
+
+
+
+Q) Padmini is 40 years old and Krishna is 60 years old.
+   How many years ago was their ratio of age was 3 : 5 ?
+
+
+> (40 - x) / (60 - x) = 3 / 5
+
+=> 5 (40 - x) = 3 (60 - x)
+=> 200 - 5x = 180 - 3x
+=> 200 - 180 = -3x + 5x
+=> 20 = 2X
+=> x = 10
+
+∴ 10 years ago their ratio of age was 3 : 5.
+
+
+
