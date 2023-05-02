@@ -82,3 +82,51 @@ Q) Padmini is 40 years old and Krishna is 60 years old.
 
 
 
+
+Q) Kanishk's present age is 2/5 th of his mother. 
+   After 8 years he will be 1/2 of the age of his mother.
+   How old is the mother at the present ?
+
+> let's say the age of Kanishk is = x
+  His mother's age is = y
+
+  Kanishk age present--> x = (2/5)y
+  His mother present age--> y = 5x / 2
+
+  8 years later --> (x + 8) = 1/2 (y + 8)
+                  => (x+8) = (y+16) / 2
+                  => 2 (x+8) = y+16
+                  => 2x + 16 = (5x/2) + 16
+                  => 4x + 32 = 5x + 16
+                  => x = 16
+
+ mother age = 5x/2 = 5*16 / 2 = 40
+
+ ∴ mother's current age is 40.
+
+
+
+
+
+Q) The sum of present ages of father and his son is 60 years.
+   6 years ago, the father's age was 5 times the age of of son.
+   After 6 years, son's age will be ?
+
+
+> lets take age of son = x
+  and age of father = y
+
+  so, x + y = 60  and y = 60 -x
+
+  6 years ago --> y-6 = 5 (x-6)
+                => y-6 = 5x - 30
+                => 60 - x - 6 = 5x - 30
+                => 54 + 30 = 5x + x
+                => 84 = 6x
+                => x = 84/6
+                => x = 14
+
+ so son's age after 6 years is = 14 + 6 = 20
+
+
+∴ son's age after 6 years is 20
