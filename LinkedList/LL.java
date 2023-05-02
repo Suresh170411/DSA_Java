@@ -66,6 +66,11 @@ public class LL {
     // delete last node
     public void deleteLast(){
 
+        if (head == null){
+            System.out.println("List is Empty !");
+            return;
+        }
+
         if (head.next == null){
             head = null;
             return;
