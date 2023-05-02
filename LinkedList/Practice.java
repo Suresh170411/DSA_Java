@@ -12,60 +12,74 @@ public class Practice {
     }
 
     Node head;
-    Node tail;
-    int size;
+    private int size;
 
-    public Practice(){
-        head = tail = null;
-        size = 0;
-    }
-
-    void add(int data){
-        Node node = new Node(data);
+    //add first
+    public void addFirst(int data){
+        Node newNode = new Node(data);
 
         if (head == null){
-            head = tail = node;
+            head = newNode;
         }else {
-            tail.next = node;
-            tail = node;
+            newNode.next = head;
+            head = newNode;
         }
-        size++;
-
-    }
-
-    void addLast(int data){
-        Node temp = new Node(data);
-
-        Node curr = head;
-        while (curr.next != null){
-            curr = curr.next;
-        }
-        curr.next = temp;
-        temp.next = null;
         size++;
     }
 
-    void printAll(Node head){
-        while (head != null){
-            System.out.print(head.data+" ");
-            head = head.next;
+    // add last
+    public void addLast(int data){
+        Node newNode = new Node(data);
+
+        Node current = head;
+        
+        if (head == null){
+            head = newNode;
+        }else {
+            while (current.next != null){
+                current = current.next;
+            }
+            current.next = newNode;
         }
-        System.out.println();
+        size++;
+    }
+
+    // print all the nodes
+    public void printAll(){
+        Node current = head;
+
+        while (current != null){
+            System.out.print(current.data+" ");
+            current = current.next;
+        }
+    }
+
+    // get the size of the list
+    public int getSize(){
+        return size;
+    }
+
+    // delete first node
+    public void deleteFirst(){
+        head = head.next;
+        size--;
     }
 
     public static void main(String[] args) {
         Practice list = new Practice();
-        list.add(10);
-        list.add(29);
-        list.add(29);
-        list.add(32);
 
-        list.printAll(list.head);
-        
-        list.addLast(59);
+        list.addFirst(2);
+        list.addLast(4);
+        list.addLast(5);
+        list.addLast(6);
 
-        list.printAll(list.head);
+        list.printAll();
 
-        System.out.println(list.size);
+        list.deleteFirst();
+        System.out.println();
+
+        list.printAll();
+
+        System.out.println("\n"+ list.getSize());
     }
 }
