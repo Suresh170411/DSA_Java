@@ -12,7 +12,7 @@ public class LL {
 
     Node head;
 
-    //add - first, last
+    //add - first
     public void addFirst(int data){
         Node newNode = new Node(data);
 
@@ -20,32 +20,34 @@ public class LL {
             head = newNode;
             return;
         }
-
         newNode.next = head;
         head = newNode;
     }
 
     //add - last
     public void addLast(int data){
-        Node newNode = new Node(data);
-        
+        Node node = new Node(data);
+
         if (head == null){
-            head = newNode;
+            head = node;
             return;
         }
 
         Node currentNode = head;
-
         while (currentNode.next != null){
             currentNode = currentNode.next;
         }
-        currentNode.next = newNode;
+        currentNode.next = node;
     }
 
     public void printNode(Node data){
-        while (head != null){
-            System.out.print(head.data+" ");
-            head = head.next;
+        if (data == null){
+            return;
+        }
+
+        while (data != null){
+            System.out.print(data.data+" ");
+            data = data.next;
         }
     }
     
