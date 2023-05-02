@@ -130,3 +130,115 @@ Q) The sum of present ages of father and his son is 60 years.
 
 
 ∴ son's age after 6 years is 20
+
+
+
+
+Q) A man has 2 sons. Presently man age is twice the sum of the ages of his 2 sons.
+   Five years hense, the father's age will be twice the sum of the ages his sons.
+   What is the age of the father ?
+
+
+> lets age of father = x
+       age of son1 = y
+       age of son2 = z
+
+       x = 3 (y+z)
+       y+z = x/3
+
+    
+    5 years hense --> (x+5) = 2 ((y+5) + (z+5))
+                    => x + 5 = 2 (y+z+10)
+                    => x+5 = 2 (x/3 + 10)
+                    => 3 (x+5) = 2 (x+30)
+                    => 3x + 15 = 2x + 60
+                    => 3x - 2x = 60 - 15
+                    => x = 45
+    
+∴ father's age is 45
+  
+
+
+Q) Consider 5 siblings born apart by 3 years each. If the sum of all the ages of the children is 50 years.
+   What is the age of younger child ?
+
+
+> s1 = x+12
+  s2 = x+9
+  s3 = x+6
+  s4 = x+3
+  s5 = x
+
+  => (x+12) + (x+9) + (x+6) + (x+3) + x = 50
+  => 5x + 30 = 50
+  => 5x = 50-30
+  => 5x = 20
+  => x = 4
+
+∴ age of youngest son is 4.
+
+
+
+
+Q) Consider 2 siblings. Out of them one is elder than the other by 20 years. 
+   10 years ago, the elder one was twice the age of the younger one.
+   What is the age of elder person ?
+
+
+> lets take age of s1 = x
+            age of s2 = y
+
+    
+    x - y = 20  ...................(i)
+
+    x - 10 = 2 (y-10)
+  => x - 10 = 2y - 20
+  => x - 2y = -10 ...................(ii)
+
+
+    (x-y) - (x-2y) = 20 - (-10)
+ => x-y-x+2y = 30
+ => y = 30
+
+ ∴ age of elder sibling is 30+20 = 50
+
+
+
+
+Q) A mother said to her daughter "I was born as old as you are at the time of your birth". 
+   If the x age is what is daughter's age 5 years back ?  (Mother's current age = 38)
+
+
+> mother present age = 38
+  daughter current age = x
+
+  at birth mother age = 38-x
+  daughter age at birth = 0
+
+
+  38 - x = x
+=> 2x = 38
+=> x = 38/2
+=> x = 19
+
+daughter age 5 years back = 19 - 5 = 14
+
+
+
+
+Q) In 10 years x will be twice as old as y was 10 years back.
+   if x is now 9 years older than y, then the present age of y is ?
+
+
+> (x+10) = 2(y-10)
+=> x+10 = 2y - 20
+=> x-2y = -30 ....................(i)
+
+x = y+9
+
+ x-2y = -30
+=> y+9-2y = -30
+=> -y = -39
+=> y = 39
+
+ ∴ present age of Y is 39
