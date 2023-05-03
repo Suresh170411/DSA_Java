@@ -62,12 +62,25 @@ public class Practice2 {
         return size;
     }
 
+    public void deleteFirst(){
+        if (head == null){
+            System.out.println("List is Empty !");
+        }
+
+        head = head.next;
+        size--;
+    }
+
     public static void main(String[] args) {
         Practice2 p = new Practice2();
 
         p.add(3);
         p.add(4);
         p.add(7);
+
+        p.printList();
+
+        p.deleteFirst();
 
         p.printList();
 
