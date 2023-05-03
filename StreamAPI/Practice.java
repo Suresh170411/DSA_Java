@@ -3,6 +3,7 @@ package StreamAPI;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -15,6 +16,7 @@ public class Practice {
         List<String> fruits = Arrays.asList("apple","orange","chrry","banana");
 
         useReduceMethod(words);
+        applyFunction(3);
 
     }
 
@@ -87,6 +89,16 @@ public class Practice {
             if (result.isPresent()){
                 System.out.println(result.get());
             }
+    }
+
+    public static void applyFunction(int num){
+        Function<Integer,Integer> addOne = x -> x+1;    // first it will take 3+1 = 4
+        Function<Integer,Integer> doubleIt = x -> x*2;  // then it will take 4*2 = 8
+        Function<Integer,Integer> squareIt = x -> x*x;  // it will make the sq of it 8*8 = 64
+
+        int result = addOne.andThen(doubleIt).andThen(squareIt).apply(num);
+
+        System.out.println(result); // result will be 64
     }
 
 }
