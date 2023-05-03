@@ -2,6 +2,7 @@ package StreamAPI;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -11,7 +12,10 @@ public class Practice {
 
         List<String> words = Arrays.asList("cat","dog","bird","elephant");
 
-        
+        List<String> fruits = Arrays.asList("apple","orange","chrry","banana");
+
+        useReduceMethod(words);
+
     }
 
     // This function will take one list and will give the sum of the EVEN elements
@@ -62,6 +66,27 @@ public class Practice {
                             .orElse("No words found !");
 
         return result;
+    }
+
+
+    // this method will append all the words inside the list into Upper Case
+    public static String appendToUpperCase(List<String> list){
+        String result = list.stream()
+                            .map(w -> w.toUpperCase())
+                            .reduce("", (a,b) -> a+b);
+        
+        return result;
+    }
+
+    // this methos will take one list and append it with "-" separator
+    public static void useReduceMethod(List<String> list){
+
+            Optional<String> result = list.stream()
+                                        .reduce((s1, s2)-> s1 + "-" + s2);
+            
+            if (result.isPresent()){
+                System.out.println(result.get());
+            }
     }
 
 }
