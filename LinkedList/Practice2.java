@@ -12,55 +12,66 @@ public class Practice2 {
         }
     }
     
-    Node head,tail;
+    Node head;
     int size;
 
     public Practice2(){
-        head = tail = null;
+        head = null;
         size = 0;
     }
 
-    void add(int data){
+    public void add(int data){
         
-        Node node = new Node(data);
-
+        Node newNode = new Node(data);
+        
         if (head == null){
-            head = tail = node;
+            head = newNode;
         }else {
-            tail.next = node;
-            tail = node;
+            newNode.next = head;
+            head = newNode;
         }
         size++;
     }
 
-    void addLast(int data){
-        Node temp = new Node(data);
+    public void printList(){
+        Node node = head;
 
-        Node curr = head;
-
-        while (curr.next != null){
-            curr = curr.next;
+        while (node != null){
+            System.out.print(node.data+"-->");
+            node = node.next;
         }
-         curr.next = temp;
-         temp.next = null;
+        System.out.println("null");
+    }
+    
+    public void addLast(int data){
+        Node node = new Node(data);
 
-         size++;
+        if (head == null){
+            head = node;
+        }else {
+            Node current = head;
+            while (current.next != null){
+                current = current.next;
+            }
+            current.next = node;
+        }
+        size++;
     }
 
-    void printList(Node head){
-        while(head != null){
-            System.out.println(head.data);
-            head = head.next;
-        }
+    public int getSize(){
+        return size;
     }
 
     public static void main(String[] args) {
         Practice2 p = new Practice2();
 
-        p.add(1);
+        p.add(3);
         p.add(4);
-        p.add(2);
+        p.add(7);
 
-        p.printList(p.head);
+        p.printList();
+
+        System.out.println(p.getSize());
+        
     }
 }
