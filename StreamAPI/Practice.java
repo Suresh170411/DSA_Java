@@ -96,7 +96,10 @@ public class Practice {
         Function<Integer,Integer> doubleIt = x -> x*2;  // then it will take 4*2 = 8
         Function<Integer,Integer> squareIt = x -> x*x;  // it will make the sq of it 8*8 = 64
 
-        int result = addOne.andThen(doubleIt).andThen(squareIt).apply(num);
+        int result = addOne
+                    .andThen(doubleIt)
+                    .andThen(squareIt)
+                    .apply(num);
 
         System.out.println(result); // result will be 64
     }
