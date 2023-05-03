@@ -17,7 +17,7 @@ public class Practice {
 
         useReduceMethod(words);
         applyFunction(3);
-
+        applyFunc(2);
     }
 
     // This function will take one list and will give the sum of the EVEN elements
@@ -102,6 +102,24 @@ public class Practice {
                     .apply(num);
 
         System.out.println(result); // result will be 64
+    }
+
+    public static void applyFunc(int num){
+        Function<Integer,Integer> addOne = x -> x+1;
+        Function<Integer,Integer> square = x -> x*x;
+
+        int result = addOne.compose(square).apply(num);
+
+        System.out.println(result); // ans --> 5
+    }
+
+
+    // This method will take a list and return sum of all the elements
+    public static int reduceMethod(List<Integer> list){
+        int result = list.stream()
+                        .reduce(0, (a,b) -> a+b);
+        
+        return result;
     }
 
 }
