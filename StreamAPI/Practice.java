@@ -15,9 +15,7 @@ public class Practice {
 
         List<String> fruits = Arrays.asList("apple","orange","chrry","banana");
 
-        useReduceMethod(words);
-        applyFunction(3);
-        applyFunc(2);
+        
     }
 
     // This function will take one list and will give the sum of the EVEN elements
