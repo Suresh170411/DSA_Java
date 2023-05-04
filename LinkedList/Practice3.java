@@ -90,6 +90,11 @@ public class Practice3 {
         size++;
     }
 
+    /**
+     * This method will add one node before the desired node element
+     * @param elem
+     * @param node
+     */
     public void addBeforeElem(int elem, int node){
         Node curr = head;
         Node prev = null;
@@ -105,6 +110,25 @@ public class Practice3 {
         size++;
     }
 
+    /**
+     * This method will check wheather the node is present inside the linkedList or not
+     * @param element
+     * @return
+     */
+    public boolean isPresent(int element){
+        Node curr = head;
+
+        if (curr == null){
+            return false;
+        }
+        while (curr != null){
+            if (curr.data == element){
+                return true;
+            }
+            curr = curr.next;
+        }
+        return false;
+    }
     public static void main(String[] args) {
         Practice3 list = new Practice3();
 
@@ -119,5 +143,7 @@ public class Practice3 {
         list.addParticularElem(3, 7);
         list.addBeforeElem(3, 1);
         list.printList();
+        
+        System.out.println(list.isPresent(3));
     }
 }
