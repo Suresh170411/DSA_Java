@@ -71,6 +71,24 @@ public class Practice4 {
             return;
         }
         head = head.next;
+        size--;
+    }
+
+    public void deleteLast(){
+        Node curr = head;
+        Node secondLast = null;
+
+        if (head == null){
+            System.out.println("List is Empty !");
+            return;
+        }
+
+        while (curr.next != null){
+            secondLast = curr;
+            curr = curr.next;
+        }
+        secondLast.next = null;
+        size--;
     }
 
     public static void main(String[] args) {
@@ -80,10 +98,12 @@ public class Practice4 {
         list.addLast(2);
         list.addLast(3);
         list.addLast(4);
+        list.addLast(5);
+        list.addLast(6);
 
         list.printList();
         // System.out.println(list.isPresent(5));
-        list.deleteFirst();
+        list.deleteLast();
         list.printList();
     }
 }
