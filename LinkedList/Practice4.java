@@ -108,6 +108,42 @@ public class Practice4 {
         size--;
     }
 
+    public void deleteNodeBefore(int elem){
+        Node curr = head;
+        Node prev = null;
+        Node prePrev = null;
+
+        if (curr == null){
+            System.out.println("List is Empty !");
+            return;
+        }
+
+        while (curr.data != elem){
+            prePrev = prev;
+            prev = curr;
+            curr = curr.next;
+        }
+        prePrev.next = curr;
+        size--;
+    }
+
+    public void deleteNodeBefore2(int elem){
+        Node curr = head;
+        Node prev = null;
+
+        if (curr == null){
+            System.out.println("List is Empty !");
+            return;
+        }
+
+        while (curr.data != elem){
+            prev = curr;
+            curr = curr.next;
+        }
+        deleteParticular(prev.data);
+        size--;
+    }
+
     public static void main(String[] args) {
         Practice4 list = new Practice4();
 
@@ -120,7 +156,7 @@ public class Practice4 {
 
         list.printList();
         // System.out.println(list.isPresent(5));
-        list.deleteParticular(3);
+        list.deleteNodeBefore2(3);
         list.printList();
         
     }
