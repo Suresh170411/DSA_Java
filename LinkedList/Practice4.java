@@ -91,6 +91,23 @@ public class Practice4 {
         size--;
     }
 
+    public void deleteParticular(int elem){
+        Node curr = head;
+        Node prev = null;
+
+        if (curr == null){
+            System.out.println("List is Empty !");
+            return;
+        }
+
+        while (curr.data != elem){
+            prev = curr;
+            curr = curr.next;
+        }
+        prev.next = curr.next;
+        size--;
+    }
+
     public static void main(String[] args) {
         Practice4 list = new Practice4();
 
@@ -103,7 +120,8 @@ public class Practice4 {
 
         list.printList();
         // System.out.println(list.isPresent(5));
-        list.deleteLast();
+        list.deleteParticular(3);
         list.printList();
+        
     }
 }
