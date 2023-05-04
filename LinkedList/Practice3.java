@@ -86,6 +86,23 @@ public class Practice3 {
         Node temp = new Node(node);
         temp.next = curr.next;
         curr.next = temp;
+
+        size++;
+    }
+
+    public void addBeforeElem(int elem, int node){
+        Node curr = head;
+        Node prev = null;
+
+        while (curr.data != elem){
+            prev = curr;
+            curr = curr.next;
+        }
+        Node temp = new Node(node);
+        temp.next = curr;
+        prev.next = temp;
+
+        size++;
     }
 
     public static void main(String[] args) {
@@ -94,12 +111,13 @@ public class Practice3 {
         list.addFirst(4);
         list.addLast(6);
         list.addLast(3);
-        list.addLast(1);
+        list.addLast(8);
         list.addFirst(9);
 
         list.printList();
         System.out.println(list.getSize());
         list.addParticularElem(3, 7);
+        list.addBeforeElem(3, 1);
         list.printList();
     }
 }
