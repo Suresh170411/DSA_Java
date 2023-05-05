@@ -174,6 +174,23 @@ public class Practice4 {
         size--;
     }
 
+    public void reverseLinkedList(){
+      
+        Node curr = head;
+        Node prev = null;
+        Node next = null;
+        
+        while(curr != null){
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        
+        head = prev;
+        printList();
+      }
+
     public static void main(String[] args) {
         Practice4 list = new Practice4();
 
@@ -188,6 +205,6 @@ public class Practice4 {
         // System.out.println(list.isPresent(5));
         list.deleteAfterNode2(3);
         list.printList();
-        
+        list.reverseLinkedList();
     }
 }
