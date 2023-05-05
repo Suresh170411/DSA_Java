@@ -175,21 +175,25 @@ public class Practice4 {
     }
 
     public void reverseLinkedList(){
-      
+        
         Node curr = head;
         Node prev = null;
-        Node next = null;
-        
-        while(curr != null){
-            next = curr.next;
+        Node nextP = null;
+
+        while (curr != null){
+            nextP = curr.next;
             curr.next = prev;
             prev = curr;
-            curr = next;
+            curr = nextP;
         }
-        
         head = prev;
         printList();
       }
+
+    
+    public int getSize(){
+        return size;
+    }
 
     public static void main(String[] args) {
         Practice4 list = new Practice4();
