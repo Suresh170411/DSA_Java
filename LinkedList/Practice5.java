@@ -131,6 +131,40 @@ public class Practice5{
         printList();
     }
     
+
+    public void findMiddleNode(){
+        Node curr = head;
+        int size = getSize();
+
+        if (size == 1){
+            System.out.println(curr.data);
+        }else {
+            if (size%2 != 0){
+                for (int i=0; i<size/2; i++){
+                    curr = curr.next;
+                }
+                System.out.println(curr.data);
+            }else {
+                for (int i=0; i<size/2-1; i++){
+                    curr = curr.next;
+                }
+                System.out.println(curr.data);
+            }
+        }
+    }
+
+    public void findNthNode(int n){
+        Node curr = head;
+        if (n >= getSize()){
+            System.out.println("Invalid Index");
+        }else {
+            for (int i=0; i<n; i++){
+                curr = curr.next;
+            }
+            System.out.println(curr.data);
+        }
+    }
+
     public static void main(String[] args) {
         Practice5 list = new Practice5();
 
@@ -138,9 +172,12 @@ public class Practice5{
         list.addLast(3);
         list.addLast(4);
         list.addLast(5);
+        list.addLast(6);
 
-        list.deleteParticular(4);
         list.printList();
-        list.reverseSLL();
+        // list.reverseSLL();
+
+        list.findMiddleNode();
+        list.findNthNode(0);
     }
 }
