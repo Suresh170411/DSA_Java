@@ -115,6 +115,22 @@ public class Practice5{
         return size;
     }
 
+    public void reverseSLL(){
+        Node curr = head;
+        Node prev = null;
+        Node next = null;
+
+        while (curr != null){
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        head = prev;
+
+        printList();
+    }
+    
     public static void main(String[] args) {
         Practice5 list = new Practice5();
 
@@ -125,6 +141,6 @@ public class Practice5{
 
         list.deleteParticular(4);
         list.printList();
-        System.out.println(list.getSize());
+        list.reverseSLL();
     }
 }
