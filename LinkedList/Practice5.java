@@ -12,6 +12,10 @@ public class Practice5{
     Node head;
     private int size;
 
+    /**
+     * This method will add one node to the begining of the LL
+     * @param node
+     */
     public void addFirst(int node){
         Node newNode = new Node(node);
 
@@ -24,6 +28,9 @@ public class Practice5{
         size++;
     }
 
+    /**
+     * This method will print the elements of LinkedList
+     */
     public void printList(){
         Node current = head;
 
@@ -34,6 +41,10 @@ public class Practice5{
         System.out.println();
     }
 
+    /**
+     * This method will add one node to the end of the LL
+     * @param data
+     */
     public void addLast(int data){
         Node newNode = new Node(data);
 
@@ -47,6 +58,11 @@ public class Practice5{
         size++;
     }
 
+    /**
+     * This method will add one element after the desired node
+     * @param elem
+     * @param node
+     */
     public void addAfterNode(int elem, int node){
         Node newNode = new Node(node);
         Node curr = head;
@@ -59,6 +75,11 @@ public class Practice5{
         size++;
     }
 
+    /**
+     * This method will add one node before the desired node
+     * @param elem
+     * @param node
+     */
     public void addBeforeNode(int elem, int node){
         Node newNode = new Node(node);
         Node curr = head;
@@ -74,6 +95,10 @@ public class Practice5{
         size++;
     }
 
+    /**
+     * This method will delete one node after the desired node
+     * @param elem
+     */
     public void deleteAfterNode(int elem){
         Node curr = head;
 
@@ -85,6 +110,10 @@ public class Practice5{
         size--;
     }
 
+    /**
+     * This method will delete one node before the desired node
+     * @param elem
+     */
     public void deleteBeforeNode(int elem){
         Node curr = head;
         Node prev = null;
@@ -99,6 +128,10 @@ public class Practice5{
         size--;
     }
 
+    /**
+     * This method will delete any particular node we want
+     * @param elem
+     */
     public void deleteParticular(int elem){
         Node curr = head;
         Node prev = null;
@@ -111,10 +144,19 @@ public class Practice5{
         size--;
     }
 
+
+    /**
+     * This method will return the list size
+     * @return
+     */
     public int getSize(){
         return size;
     }
 
+
+    /**
+     * This method will reverse the LinkedList
+     */
     public void reverseSLL(){
         Node curr = head;
         Node prev = null;
@@ -132,6 +174,9 @@ public class Practice5{
     }
     
 
+    /**
+     * This method will find the middle node by using the size of the LinkedList
+     */
     public void findMiddleNode(){
         Node curr = head;
         int size = getSize();
@@ -153,6 +198,11 @@ public class Practice5{
         }
     }
 
+
+    /**
+     * This method will print the Nth node in a LinkedList using size of LL
+     * @param n
+     */
     public void findNthNode(int n){
         Node curr = head;
         if (n >= getSize()){
@@ -165,6 +215,9 @@ public class Practice5{
         }
     }
 
+    /**
+     * This method uses 2 pointers to find the middle node of a LL --> suitable for ODD size
+     */
     public void findMiddleNodeUsingTP(){
         Node slow = head;
         Node fast = head;
@@ -179,6 +232,10 @@ public class Practice5{
         System.out.println(slow.data);
     }
 
+
+    /**
+     * This method will find the middle node of LL using 2 pointers --> suitable for EVEN size
+     */
     public void findMiddleEvenNode(){
         Node slow = head;
         Node fast = head;
