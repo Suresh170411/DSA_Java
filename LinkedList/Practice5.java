@@ -165,6 +165,20 @@ public class Practice5{
         }
     }
 
+    public void findMiddleNodeUsingTP(){
+        Node slow = head;
+        Node fast = head;
+
+        slow = slow.next;
+        fast = fast.next.next;
+
+        while (fast != null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        System.out.println(slow.data);
+    }
+
     public static void main(String[] args) {
         Practice5 list = new Practice5();
 
@@ -177,7 +191,6 @@ public class Practice5{
         list.printList();
         // list.reverseSLL();
 
-        list.findMiddleNode();
-        list.findNthNode(0);
+        list.findMiddleNodeUsingTP();
     }
 }
