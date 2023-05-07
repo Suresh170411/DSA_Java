@@ -179,6 +179,22 @@ public class Practice5{
         System.out.println(slow.data);
     }
 
+    public void findMiddleEvenNode(){
+        Node slow = head;
+        Node fast = head;
+        Node prev = null;
+
+        slow = slow.next;
+        fast = fast.next.next;
+
+        while (fast != null && fast.next != null){
+            prev = slow;
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        System.out.println(prev.data);
+    }
+
     public static void main(String[] args) {
         Practice5 list = new Practice5();
 
@@ -187,10 +203,12 @@ public class Practice5{
         list.addLast(4);
         list.addLast(5);
         list.addLast(6);
+        list.addLast(8);
 
         list.printList();
         // list.reverseSLL();
 
         list.findMiddleNodeUsingTP();
+        list.findMiddleEvenNode();
     }
 }
