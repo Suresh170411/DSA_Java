@@ -1,3 +1,5 @@
+import java.util.Stack;
+
 public class Palindrome {
     class Node {
         String data;
@@ -115,6 +117,28 @@ public class Palindrome {
         }
         prePrev.next = prev.next;
     }
+
+    // using stack approach
+    public boolean bestApproach(){
+        Stack<String> st = new Stack<>();
+
+        Node curr = head;
+        while (curr != null){
+            st.push(curr.data);
+            curr = curr.next;
+        }
+        
+        Node temp = head;
+        
+        while (temp != null){
+            if (temp.data != st.pop()){
+                return false;
+            }
+            temp = temp.next;
+        }
+        return true;
+    }
+
     public static void main(String[] args){
         Palindrome list = new Palindrome();
 
@@ -133,5 +157,7 @@ public class Palindrome {
         }else {
             System.out.println("THIS IS NOT A PALINDROME");
         }
+
+        System.out.println(list.bestApproach());
     }
 }
