@@ -222,9 +222,6 @@ public class Practice5{
         Node slow = head;
         Node fast = head;
 
-        slow = slow.next;
-        fast = fast.next.next;
-
         while (fast != null && fast.next != null){
             slow = slow.next;
             fast = fast.next.next;
@@ -240,9 +237,6 @@ public class Practice5{
         Node slow = head;
         Node fast = head;
         Node prev = null;
-
-        slow = slow.next;
-        fast = fast.next.next;
 
         while (fast != null && fast.next != null){
             prev = slow;
