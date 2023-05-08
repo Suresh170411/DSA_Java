@@ -169,7 +169,6 @@ public class Practice5{
             curr = next;
         }
         head = prev;
-
         printList();
     }
     
@@ -246,6 +245,28 @@ public class Practice5{
         System.out.println(prev.data);
     }
 
+    /**
+     * This method will find Kᵗʰ node from the ending
+     * @param elem
+     */
+    public void findKthNodeFromEnd(int elem){
+        Node curr = head;
+
+        int count = 0;
+        while (curr != null){
+            count++;
+            curr = curr.next;
+        }
+        
+        Node node = head;
+        // here we have used (count-k+1)
+        // Kᵗʰ node from ending == (n-K+1)ᵗʰ node from begining
+        for (int i=1; i<count-elem+1; i++){
+            node = node.next;
+        }
+        System.out.println(node.data);
+    }
+
     public static void main(String[] args) {
         Practice5 list = new Practice5();
 
@@ -259,7 +280,8 @@ public class Practice5{
         list.printList();
         // list.reverseSLL();
 
-        list.findMiddleNodeUsingTP();
-        list.findMiddleEvenNode();
+        // list.findMiddleNodeUsingTP();
+        // list.findMiddleEvenNode();
+        list.findKthNodeFromEnd(5);
     }
 }
