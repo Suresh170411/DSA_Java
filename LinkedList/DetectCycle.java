@@ -50,6 +50,11 @@ public class DetectCycle {
         return false;
     }
 
+    /**
+     * This function detects if a linked list has a loop or not.
+     * 
+     * @param head The head node of a linked list.
+     */
     public void detectLoop(Node head){
         Node slow = head;
         Node fast = head;
