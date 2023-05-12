@@ -33,17 +33,6 @@ public class Palindrome {
         curr.next = node;
     }
 
-    public void addAfterNode(String elem, String node){
-        Node newNode = new Node(node);
-        Node curr = head;
-
-        while (curr.data != elem){
-            curr = curr.next;
-        }
-        newNode.next = curr.next;
-        curr.next = newNode;
-    }
-
     public String printList(){
         Node curr = head;
         String bag = "";
@@ -70,21 +59,6 @@ public class Palindrome {
         return printList();
     }
 
-    public void deleteFirst(){
-        head = head.next;
-    }
-
-    public void deleteLast(){
-        Node curr = head;
-        Node prev = null;
-
-        while (curr.next != null){
-            prev = curr;
-            curr = curr.next;
-        }
-        prev.next = null;
-    }
-
     public void deleteParticular(String elem){
         Node curr = head;
         Node prev = null;
@@ -103,19 +77,6 @@ public class Palindrome {
             curr = curr.next;
         }
         curr.next = curr.next.next;
-    }
-
-    public void deleteBeforeNode(String elem){
-        Node curr = head;
-        Node prev = null;
-        Node prePrev = null;
-
-        while (curr.data != elem){
-            prePrev = prev;
-            prev = curr;
-            curr = curr.next;
-        }
-        prePrev.next = prev.next;
     }
 
     // using stack approach
