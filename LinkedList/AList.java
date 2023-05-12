@@ -18,6 +18,7 @@ public class AList {
             head = newNode;
         }else {
             Node curr = head;
+
             while (curr.next != null){
                 curr = curr.next;
             }
@@ -25,59 +26,53 @@ public class AList {
         }
     }
 
-    public void printList(){
-        Node curr = head;
+    public void addFirst(int data){
+        Node newNode = new Node(data);
 
-        if (curr == null){
-            System.out.println("List is empty !");
-            return;
+        if (head == null){
+            head = newNode;
         }else {
-            while (curr != null){
-                System.out.print(curr.data+" ");
-                curr = curr.next;
-            }
-            System.out.println();
+            newNode.next = head;
+            head = newNode;
         }
     }
 
-    public void addBefore(int elem, int node){
+    public void addNodeAfter(int elem, int node){
         Node curr = head;
-        Node prev = null;
-
-        while (curr.data != elem){
-            prev = curr;
-            curr = curr.next;
-        }
-        Node newNode = new Node(node);
-        prev.next = newNode;
-        newNode.next = curr;
-    }
-
-    public void addAfter(int elem, int node){
-        Node curr = head;
-
-        while (curr.data != elem){
-            curr = curr.next;
-        }
         Node temp = new Node(node);
+
+        while (curr.data != elem){
+            curr = curr.next;
+        }
         temp.next = curr.next;
         curr.next = temp;
     }
 
-    public void deleteBefore(int elem){
+    public void addNodeBefore(int elem, int node){
         Node curr = head;
         Node prev = null;
-        Node secondLast = null;
 
         while (curr.data != elem){
-            secondLast = prev;
             prev = curr;
             curr = curr.next;
         }
-        secondLast.next = prev.next;
+        Node temp = new Node(node);
+        prev.next = temp;
+        temp.next = curr;
     }
 
-    public void deleteAfter(int elem){
+    public void deteParticularNode(int elem){
+        Node curr = head;
+        Node prev = null;
+
+        while (curr.data != elem){
+            prev = curr;
+            curr = curr.next;
+        }
+        prev.next = curr.next;
+    }
+
+    public void deleteAfterNode(int elem){
         Node curr = head;
 
         while (curr.data != elem){
@@ -86,7 +81,29 @@ public class AList {
         curr.next = curr.next.next;
     }
 
-    public void reverseNode(){
+    public void deleteBeforeNode(int data){
+        Node curr = head;
+        Node prev = null;
+        Node secondPrev = null;
+
+        while (curr.data != data){
+            secondPrev = prev;
+            prev = curr;
+            curr = curr.next;
+        }
+        secondPrev.next = curr;
+    }
+
+    public void printList(){
+        Node curr = head;
+        while (curr != null){
+            System.out.print(curr.data+" ");
+            curr = curr.next;
+        }
+        System.out.println();
+    }
+
+    public void reverseList(){
         Node curr = head;
         Node prev = null;
         Node next = null;
@@ -101,6 +118,20 @@ public class AList {
         printList();
     }
 
+    public void findMiddle(){
+        Node slow = head;
+        Node fast = head;
+        // Node prev = null;
+
+        while (fast != null && fast.next != null){
+            // prev = slow;
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        System.out.println(slow.data);
+        // System.out.println(prev.data);
+    }
+
     public static void main(String[] args) {
         AList list = new AList();
 
@@ -109,9 +140,13 @@ public class AList {
         list.addNode(3);
         list.addNode(4);
         list.addNode(5);
+        list.addNode(6);
+        list.addNode(7);
+        list.addNode(8);
+
+        // list.deleteBeforeNode(4);
 
         list.printList();
-        list.reverseNode();
-
+        list.findMiddle();
     }
 }
