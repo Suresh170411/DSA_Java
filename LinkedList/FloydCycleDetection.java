@@ -1,3 +1,6 @@
+import java.util.HashSet;
+import java.util.Set;
+
 public class FloydCycleDetection {
     class Node {
         int data;
@@ -35,6 +38,22 @@ public class FloydCycleDetection {
         System.out.println();
     }
 
+    public void checkCycle(){
+        Node curr = head;
+
+        Set<Node> set = new HashSet<>();
+
+        while (curr != null){
+            if (set.contains(curr)){
+                System.out.println("Cycle Found");
+                return;
+            }
+            set.add(curr);
+            curr = curr.next;
+        }
+        System.out.println("Cycle Not Found");
+    }
+
     public boolean checkFloydCycle(){
         Node slow = head;
         Node fast = head;
@@ -62,6 +81,7 @@ public class FloydCycleDetection {
 
         list.head.next.next.next.next = list.head;
 
-        System.out.println(list.checkFloydCycle());
+        // System.out.println(list.checkFloydCycle());
+        list.checkCycle();
     }
 }
