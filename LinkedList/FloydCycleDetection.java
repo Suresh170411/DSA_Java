@@ -38,6 +38,10 @@ public class FloydCycleDetection {
         System.out.println();
     }
 
+    /**
+     * The function checks if a linked list contains a cycle by using a hash set to keep track of
+     * visited nodes.
+     */
     public void checkCycle(){
         Node curr = head;
 
