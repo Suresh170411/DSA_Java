@@ -54,6 +54,13 @@ public class FloydCycleDetection {
         System.out.println("Cycle Not Found");
     }
 
+    /**
+     * This function checks if there is a cycle in a linked list using Floyd's cycle-finding algorithm.
+     * 
+     * @return The method is checking if there is a cycle in a linked list using Floyd's cycle-finding
+     * algorithm. It returns a boolean value indicating whether a cycle is present or not. If a cycle
+     * is present, it returns true, otherwise, it returns false.
+     */
     public boolean checkFloydCycle(){
         Node slow = head;
         Node fast = head;
