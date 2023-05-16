@@ -1,17 +1,16 @@
 import java.util.HashSet;
-import java.util.Set;
+
+class Node{
+    int data;
+    Node next;
+
+    public Node(int data){
+        this.data = data;
+        this.next =  null;
+    }
+}
 
 public class IntersectionYType{
-    class Node{
-        int data;
-        Node next;
-
-        public Node(int data){
-            this.data = data;
-            this.next =  null;
-        }
-    }
-
     Node head;
 
     public void add(int data){
@@ -39,48 +38,39 @@ public class IntersectionYType{
         System.out.println();
     }
 
-    public void checkIntersection(Node head1, Node head2){
+    public static Node checkIntersection(Node head1, Node head2){
 
-        Set<Node> set = new HashSet<>();
-
-        while (head1.next != null){
-            set.add(head1);
+        HashSet<Node> hs = new HashSet<Node>();
+        while (head1 != null) {
+            hs.add(head1);
             head1 = head1.next;
         }
-
-        while (head2.next != null){
-            if (set.contains(head2)){
-                System.out.println("Intersection Found with the node : " + head2.data);
-                break;
+        while (head2 != null) {
+            if (hs.contains(head2)) {
+                return head2;
             }
-            set.add(head2);
+            head2 = head2.next;
         }
-
-        System.out.println("No Intersection Found");
+        return null;
     }
 
     public static void main(String[] args) {
-        IntersectionYType list1 = new IntersectionYType();
 
-        list1.add(1);
-        list1.add(2);
-        list1.add(3);
-        list1.add(6);
-        list1.add(7);
-        list1.add(8);
+        // list 1
+        Node node1 = new Node(1);
+        node1.next = new Node(2);
+        node1.next.next = new Node(3);
+        node1.next.next.next = new Node(4);
+        node1.next.next.next.next = new Node(5);
+        node1.next.next.next.next.next = new Node(6);
+        node1.next.next.next.next.next.next = new Node(7);
 
+        // list 2
+        Node node2 = new Node(10);
+        node2.next = new Node(9);
+        node2.next.next = new Node(8);
+        node2.next.next.next = node1.next.next.next;
 
-        IntersectionYType list2 = new IntersectionYType();
-
-        list2.add(4);
-        list2.add(5);
-        list2.add(list1.head.next.next.next.data);
-        list2.add(7);
-        list2.add(8);
-
-        list1.print();
-        list2.print();
-
-        list1.checkIntersection(list1.head, list2.head);
+        System.out.println(checkIntersection(node1, node2).data);
     }
 }
