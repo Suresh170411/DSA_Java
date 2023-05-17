@@ -65,7 +65,7 @@ public class FindIntersectionPointY {
      * @return The data of the node where node1 and node2 intersect.
      */
     public int find(int diff, Node node1, Node node2){
-        for (int i=0; i<diff && node1 != null; i++){
+        for (int i=0; i<diff; i++){
             node1 = node1.next;
         }
         while (node1 != node2){
