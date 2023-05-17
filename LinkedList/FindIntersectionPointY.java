@@ -35,6 +35,13 @@ public class FindIntersectionPointY {
         System.out.println();
     }
 
+    /**
+     * This Java function returns the length of a linked list by iterating through each node and
+     * incrementing a counter.
+     * 
+     * @return The method `getLength()` returns an integer value which represents the length of the
+     * linked list.
+     */
     public int getLength(){
         Node curr = head;
         int len =0;
@@ -46,6 +53,17 @@ public class FindIntersectionPointY {
         return len;
     }
 
+    /**
+     * This function finds the data value of the node where two linked lists intersect, given the
+     * difference in length between the two lists and the starting nodes of each list.
+     * 
+     * @param diff The difference in length between two linked lists.
+     * @param node1 The first node in a linked list.
+     * @param node2 The "node2" parameter is a reference to a Node object, which is likely a node in a
+     * linked list data structure. The method is using this parameter to find the intersection point of
+     * two linked lists.
+     * @return The data of the node where node1 and node2 intersect.
+     */
     public int find(int diff, Node node1, Node node2){
         for (int i=0; i<diff && node1 != null; i++){
             node1 = node1.next;
