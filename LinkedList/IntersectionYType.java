@@ -13,6 +13,12 @@ class Node{
 public class IntersectionYType{
     Node head;
 
+    /**
+     * This function adds a new node with the given data to the end of a linked list.
+     * 
+     * @param data The data parameter is an integer value that represents the data to be added to the
+     * linked list.
+     */
     public void add(int data){
         Node newNode = new Node(data);
         
@@ -28,6 +34,9 @@ public class IntersectionYType{
         }
     }
 
+    /**
+     * This Java function prints the data of each node in a linked list.
+     */
     public void print(){
         Node curr = head;
 
@@ -38,6 +47,15 @@ public class IntersectionYType{
         System.out.println();
     }
 
+    /**
+     * The function checks if two linked lists intersect by using a HashSet to store nodes and
+     * comparing them.
+     * 
+     * @param head1 The head node of the first linked list.
+     * @param head2 The head node of the second linked list.
+     * @return The method is returning a Node object, which represents the node where the two linked
+     * lists intersect. If there is no intersection, it returns null.
+     */
     public static Node checkIntersection(Node head1, Node head2){
 
         HashSet<Node> hs = new HashSet<Node>();
