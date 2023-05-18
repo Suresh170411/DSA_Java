@@ -80,6 +80,8 @@ public class FloydCycleDetection {
         return false;
     }
 
+    
+
     public static void main(String[] args) {
         FloydCycleDetection list = new FloydCycleDetection();
 
@@ -94,5 +96,7 @@ public class FloydCycleDetection {
 
         // System.out.println(list.checkFloydCycle());
         list.checkCycle();
+
+        
     }
 }
