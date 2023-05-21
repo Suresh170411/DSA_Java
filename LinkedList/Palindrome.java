@@ -79,7 +79,14 @@ public class Palindrome {
         curr.next = curr.next.next;
     }
 
-    // using stack approach
+    
+    /**
+     * The function checks if a linked list is a palindrome by using a stack to store the elements and
+     * comparing them with the original linked list.
+     * 
+     * @return The method is returning a boolean value. It returns `true` if the linked list is a
+     * palindrome (i.e., reads the same forwards and backwards), and `false` otherwise.
+     */
     public boolean bestApproach(){
         Stack<String> st = new Stack<>();
 
