@@ -8,7 +8,8 @@ public class StrReverseDot {
         String words = "hello there how are you";
         reverseStrWithSpace(words);
 
-        
+        String num = "8955795758";
+        parseIntCheck(num);
     }
 
     /**
@@ -43,5 +44,9 @@ public class StrReverseDot {
         }
 
         System.out.println(res.substring(0, res.length()-1));
+    }
+
+    public static void parseIntCheck(String num){
+        System.out.println(Integer.parseInt(num));
     }
 }
