@@ -9,6 +9,13 @@ public class HashMapPractice {
         printHM(arr);
     }
 
+    /**
+     * The function takes an integer array as input and prints the frequency of each element in the
+     * array.
+     * 
+     * @param arr an integer array that contains the elements for which you want to find the frequency
+     * of occurrence.
+     */
     public static void printFreq(int arr []){
         Map<Integer,Integer> hm = new HashMap<>();
 
