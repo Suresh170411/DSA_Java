@@ -31,6 +31,13 @@ public class HashMapPractice {
             System.out.println(e.getKey() +"=="+e.getValue());
         }
     }
+    /**
+     * The function takes an integer array as input, creates a HashMap to store the frequency of each
+     * element in the array, and then prints out the elements and their frequencies.
+     * 
+     * @param arr an integer array that contains the elements to be counted and printed in the format
+     * "element==count".
+     */
     public static void printHM(int arr []){
 
         HashMap<Integer,Integer> hm = new HashMap<>();
