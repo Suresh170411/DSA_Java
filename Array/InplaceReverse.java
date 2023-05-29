@@ -7,6 +7,14 @@ public class InplaceReverse {
         reverseArray(arr.length,2,arr);
     }
 
+    /**
+     * The function reverses subarrays of length k within an array of length n.
+     * 
+     * @param n The total number of elements in the array.
+     * @param k The parameter "k" in the method "reverseArray" represents the size of the subarray that
+     * needs to be reversed.
+     * @param arr an integer array that needs to be reversed in parts
+     */
     public static void reverseArray(int n, int k, int arr []){
         int left=0;
         int right=k;
