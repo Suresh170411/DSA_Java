@@ -7,6 +7,13 @@ public class CountSpecialChar{
         System.out.println(getTheSpecialChar(str));
     }
 
+    /**
+     * The function counts the number of special characters in a given string.
+     * 
+     * @param str The input string for which the number of special characters needs to be counted.
+     * @return The method `countSpecialChar` returns an integer value which represents the count of
+     * special characters in the input string `str`.
+     */
     public static int countSpecialChar(String str){
         int n = str.length();
         int count = 0;
