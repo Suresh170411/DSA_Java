@@ -1,7 +1,10 @@
 package Hashmap;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
@@ -17,7 +20,9 @@ public class SortHashMap {
 
         print(hm);
 
-        sortHashMapByValue(hm);
+        // sortHashMapByValue(hm);
+
+        sortUsingList(hm);
     }
 
     /**
@@ -49,7 +54,20 @@ public class SortHashMap {
         }
     }
 
-    public static void sortUsingLE(HashMap<String,Student> hm){
-        
+    /**
+     * We inserted all the Entries to a List
+     * Then using Collection.sort we sort the HashMap
+     * @param hm
+     */
+    public static void sortUsingList(HashMap<String,Student> hm){
+        List<Map.Entry<String,Student>> list = new ArrayList<>(hm.entrySet());
+
+        Collections.sort(list, (s1,s2)->s1.getValue().getMarks() > s2.getValue().getMarks() ? +1 : -1);
+
+        // System.out.println(list);
+
+        for (Map.Entry<String,Student> s : list){
+            System.out.println(s);
+        }
     }
 }
