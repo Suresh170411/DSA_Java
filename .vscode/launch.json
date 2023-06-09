@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "SortHashMap",
+            "request": "launch",
+            "mainClass": "Hashmap.SortHashMap",
+            "projectName": "DSA_Java_259932f1"
+        },
+        {
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
