@@ -5,12 +5,17 @@ import java.util.List;
 
 public class ListSort {
     public static void main(String[] args) {
+        
         List<Integer> list = Arrays.asList(2,4,5,1,8,5,9);
         sortList(list);
 
         List<Student> students = new ArrayList<>();
 
-        students.add();
+        students.add(new Student(10, "Suresh", 540));
+        students.add(new Student(20, "Abhishek", 590));
+        students.add(new Student(30, "Padma", 530));
+
+        sortListCustomClass(students);
     }
 
     public static void sortList(List<Integer> list){
