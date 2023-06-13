@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ListSort",
+            "request": "launch",
+            "mainClass": "ListSort",
+            "projectName": "DSA_Java_259932f1"
+        },
+        {
+            "type": "java",
             "name": "SortHashMapByValue",
             "request": "launch",
             "mainClass": "SortHashMapByValue",
