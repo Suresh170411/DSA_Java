@@ -1,4 +1,4 @@
-package Important;
+// package Important;
 
 public class DigitSum {
     public static void main(String[] args) {
@@ -6,6 +6,13 @@ public class DigitSum {
     }
 
     // 32 --> 3+2 = 5
+    /**
+     * The function digitSum calculates the sum of the digits of a given integer.
+     * 
+     * @param n an integer for which we want to calculate the sum of its digits.
+     * @return The method `digitSum` returns an integer value which is the sum of the digits of the
+     * input integer `n`.
+     */
     public static int digitSum(int n){
         int sum = 0;
 
