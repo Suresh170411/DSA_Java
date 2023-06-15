@@ -4,7 +4,7 @@ public class StringFirstUpperCase {
     public static void main(String[] args) {
         String str = "hello there how are you";
 
-        String arr [] = str.split("\\s");
+        String arr [] = str.split("\\s");   // [hello, there, how, are, you]
 
         System.out.println(Arrays.toString(arr));
 
