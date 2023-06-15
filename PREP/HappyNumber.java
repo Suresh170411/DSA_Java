@@ -38,6 +38,14 @@ public class HappyNumber {
     }
 
     // happy number checking method
+    /**
+     * The function checks if a given number is a happy number by repeatedly squaring its digits and
+     * checking if the resulting sum equals 1 or if it enters a cycle.
+     * 
+     * @param n The input integer for which we want to check if it is a happy number or not.
+     * @return The method `isHappyNumber` returns a boolean value. It returns `true` if the input
+     * integer `n` is a happy number, and `false` otherwise.
+     */
     public static boolean isHappyNumber(int n){
         HashSet<Integer> st = new HashSet<>();
 
