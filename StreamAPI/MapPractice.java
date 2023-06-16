@@ -8,16 +8,38 @@ public class MapPractice {
     public static void main(String[] args) {
         List<Integer> list = Arrays.asList(1,5,3,4,7,2);
 
-        List<Integer> result = numberOp(list);
+        numberOp(list);
 
-        System.out.print("Result : ");
-        result.forEach(s -> System.out.print(s+" "));
-        System.out.println();
+        List<String> cities = Arrays.asList("Balasore", "Goa", "Pune", "Indore");
+        
+        stringOp(cities);
+        stringOperation(cities);
     }
 
-    public static List<Integer> numberOp(List<Integer> list){
-        return list.stream()
-                    .map(n -> n*2)
-                    .collect(Collectors.toList());
+    public static void numberOp(List<Integer> list){
+        list.stream()
+            .map(n -> n*2)
+            .collect(Collectors.toList()).forEach(s -> System.out.print(s+" "));
+        
+        System.out.println();
+        System.out.println("========================");
+    }
+
+    public static void stringOp(List<String> list){
+        list.stream()
+            .map(String::toUpperCase)
+            .collect(Collectors.toList()).forEach(s-> System.out.print(s+" "));
+
+        System.out.println();
+        System.out.println("========================");
+    }
+
+    public static void stringOperation(List<String> list){
+        list.stream()
+        .map(s -> "stream_api->"+s)
+        .collect(Collectors.toList())
+        .forEach(s->System.out.print(s+" "));
+
+        System.out.println();
     }
 }
