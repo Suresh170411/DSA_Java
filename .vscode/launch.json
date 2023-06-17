@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "FlatMapPractice",
+            "request": "launch",
+            "mainClass": "FlatMapPractice",
+            "projectName": "DSA_Java_259932f1"
+        },
+        {
+            "type": "java",
             "name": "MapPractice",
             "request": "launch",
             "mainClass": "StreamAPI.MapPractice",
