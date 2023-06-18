@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "StrReverseDot",
+            "request": "launch",
+            "mainClass": "StrReverseDot",
+            "projectName": "DSA_Java_259932f1"
+        },
+        {
+            "type": "java",
             "name": "ForeachOrder",
             "request": "launch",
             "mainClass": "ForeachOrder",
