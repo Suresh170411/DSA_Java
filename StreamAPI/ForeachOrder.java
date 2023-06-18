@@ -9,6 +9,13 @@ public class ForeachOrder {
         forEachOp(list);
     }
 
+    /**
+     * The function takes a list of integers and prints each element in the list in order using a
+     * stream.
+     * 
+     * @param list The parameter "list" is a List of Integer values that is passed as an argument to
+     * the method "forEachOp".
+     */
     public static void forEachOp(List<Integer> list){
         Stream<Integer> res = list.stream();
             
