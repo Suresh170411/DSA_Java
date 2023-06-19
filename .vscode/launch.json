@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "SwitchCase",
+            "request": "launch",
+            "mainClass": "SwitchCase",
+            "projectName": "DSA_Java_259932f1"
+        },
+        {
+            "type": "java",
             "name": "StrReverseDot",
             "request": "launch",
             "mainClass": "StrReverseDot",
