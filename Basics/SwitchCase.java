@@ -1,7 +1,15 @@
 public class SwitchCase {
     public static void main(String[] args) {
         
-        int number = 6;
+        int number = 4;
+        checkNumber(number);
+
+        String day = "Friday";
+        checkWithDays(day);
+        
+    }
+
+    public static void checkNumber(int number){
         switch(number){
             case 1 : System.out.println("This is One");
             break;
@@ -14,6 +22,18 @@ public class SwitchCase {
             case 5 : System.out.println("This is Five");
             break;
             default : System.out.println("Please select a number between 1 to 5 !");
+        }
+    }
+
+    public static void checkWithDays(String day){
+
+        switch(day){
+            case "Monday","Tuesday","Wednessday","Thursday","Friday","Saturday" : System.out.println("Please wake before 7 AM");
+            break;
+            
+            case "Sunday" : System.out.println("Chill this is Sunday !");
+
+            default : System.out.println("Please give a proper input");
         }
     }
 }
