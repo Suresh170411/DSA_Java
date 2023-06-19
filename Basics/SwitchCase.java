@@ -6,6 +6,7 @@ public class SwitchCase {
 
         String day = "Friday";
         checkWithDays(day);
+        switchCaseUsingLE(day);
         
     }
 
@@ -34,6 +35,16 @@ public class SwitchCase {
             case "Sunday" : System.out.println("Chill this is Sunday !");
 
             default : System.out.println("Please give a proper input");
+        }
+    }
+
+    public static void switchCaseUsingLE(String day){
+        switch(day){
+            case "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" -> System.out.println("Please wake before 7 AM");
+
+            case "Sunday" -> System.out.println("Please take your time because this is Sunday!");
+
+            default -> System.out.println("Please wake before 8 AM");
         }
     }
 }
