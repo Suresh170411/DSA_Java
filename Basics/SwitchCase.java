@@ -47,4 +47,19 @@ public class SwitchCase {
             default -> System.out.println("Please wake before 8 AM");
         }
     }
+
+    public static void switchCaseInOptimalWay1(String day){
+
+        String result = "";
+
+        switch(day){
+            case "Monday","Tuesday","Wednessday","Thursday","Friday","Saturday" -> result = "Wake up at 7 AM";
+
+            case "Sunday" -> result = "Wake up when you are ready !";
+
+            default -> result = "Take your time but before 8 AM";
+        }
+
+        System.out.println(result);
+    }
 }
