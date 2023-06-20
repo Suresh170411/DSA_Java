@@ -34,6 +34,7 @@ public class SwitchCase {
             break;
             
             case "Sunday" : System.out.println("Chill this is Sunday !");
+            break;
 
             default : System.out.println("Please give a proper input");
         }
