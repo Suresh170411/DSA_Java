@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Practice1{
     public static void main(String[] args) {
         int arr [] = {1,2,3,4,5,6};
@@ -5,6 +7,7 @@ public class Practice1{
         int k = 6;
 
         bruteForceApproach(arr, k);
+        twoPointersPractice(arr, k);
         
 
     }
@@ -17,6 +20,30 @@ public class Practice1{
                 if (arr[i]+arr[j] == k){
                     count++;
                 }
+            }
+        }
+
+        System.out.println(count);
+    }
+
+    public static void twoPointersPractice(int arr [], int k){
+        int left = 0;
+        int right = arr.length-1;
+
+        int count = 0;
+        Arrays.sort(arr);
+        
+        while (left < right){
+            int sum  = arr[left]+arr[right];
+
+            if (sum < k){
+                left++;
+            }else if (sum > k){
+                right--;
+            }else {
+                count++;
+                left++;
+                right--;
             }
         }
 
