@@ -9,6 +9,7 @@ public class SubarraySum {
         int k = 4;
         bruteForce(arr,k);
         slidingWindowApproach(arr, k);
+        slidingWindowOptimized(arr, k);
     }
 
     public static void bruteForce(int arr [], int K){
@@ -57,5 +58,21 @@ public class SubarraySum {
             }
         }
         System.out.println(max);
+    }
+
+    public static void slidingWindowOptimized(int arr [], int k){
+        int sum = 0;
+
+        for (int i=0; i<k; i++){
+            sum+= arr[i];
+        }
+
+        int curr_sum = sum;
+
+        for (int i=k; i<arr.length; i++){
+            curr_sum = curr_sum - arr[i-k] + arr[i];
+            sum = Math.max(curr_sum, sum);
+        }
+        System.out.println(sum);
     }
 }
