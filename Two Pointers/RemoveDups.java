@@ -1,8 +1,11 @@
+import java.util.TreeSet;
+
 public class RemoveDups {
     public static void main(String[] args) {
         int arr [] = {1,1,2,3,4,4,5,6};
 
         bruteForce(arr);
+        bestApproach(arr);
     }
 
     public static void bruteForce(int arr []){
@@ -21,6 +24,20 @@ public class RemoveDups {
 
         for (int i=0; i<=j; i++){
             System.out.print(arr[i]+" ");
+        }
+        System.out.println();
+    }
+
+    public static void bestApproach(int arr []){
+       
+        TreeSet<Integer> ts = new TreeSet<>();
+
+        for (int i : arr){
+            ts.add(i);
+        }
+
+        for (Integer i : ts){
+            System.out.print(i+" ");
         }
         System.out.println();
     }
