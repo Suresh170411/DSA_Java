@@ -38,4 +38,8 @@ public class SubarraySum {
         }
         System.out.println(max);
     }
+
+    public static void slidingWindowApproach(int arr []){
+        
+    }
 }
