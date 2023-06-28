@@ -60,6 +60,14 @@ public class SubarraySum {
         System.out.println(max);
     }
 
+    /**
+     * The slidingWindowOptimized function calculates the maximum sum of a subarray of length k using a
+     * sliding window approach.
+     * 
+     * @param arr An array of integers that represents the input sequence.
+     * @param k The parameter "k" represents the size of the sliding window. It determines how many
+     * elements are considered in each iteration of the sliding window.
+     */
     public static void slidingWindowOptimized(int arr [], int k){
         int sum = 0;
 
