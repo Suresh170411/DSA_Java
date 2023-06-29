@@ -20,6 +20,13 @@ public class FactorialPrint {
 
         System.out.println(getFactorial(n));
     }
+    
+    /**
+     * The function calculates the factorial of a given number recursively.
+     * 
+     * @param n The parameter "n" represents the number for which we want to calculate the factorial.
+     * @return The factorial of the given number 'n' is being returned.
+     */
     public static int getFactorial(int n){
         
         if (n == 0 || n == 1){
