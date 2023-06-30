@@ -19,6 +19,13 @@ public class SumOfNnaturalNums {
     }
 
     // Recursive approach for calculating the sum of N natural numbers
+    /**
+     * The function calculates the sum of the first n natural numbers recursively.
+     * 
+     * @param n The parameter "n" represents the number of natural numbers for which we want to
+     * calculate the sum.
+     * @return The method is returning the sum of the first n natural numbers.
+     */
     public static int printSumOfNnaturalNumbers(int n){
 
         if (n == 0 || n == 1){
