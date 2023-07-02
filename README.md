@@ -4,6 +4,8 @@ It is a repository for the practice of DSA using java
 ## Topics
 - String      ✅
 - Array       ✅
+- Two Pointers✅
+- Sliding Window✅
 - Stack       ✅
 - Queue       ✅
 - LinkedList  ✅
