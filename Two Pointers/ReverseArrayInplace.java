@@ -9,6 +9,11 @@ public class ReverseArrayInplace {
         solution(arr);
     }
 
+    /**
+     * The function reverses the elements in an array and prints the reversed array.
+     * 
+     * @param arr The parameter `arr` is an array of integers.
+     */
     public static void solution(int arr []){
         int left = 0;
         int right = arr.length-1;

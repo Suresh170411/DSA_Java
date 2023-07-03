@@ -28,6 +28,12 @@ public class RemoveDups {
         System.out.println();
     }
 
+    /**
+     * The function takes an array of integers, removes duplicates, and prints the unique elements in
+     * ascending order.
+     * 
+     * @param arr The parameter "arr" is an array of integers.
+     */
     public static void bestApproach(int arr []){
        
         TreeSet<Integer> ts = new TreeSet<>();
