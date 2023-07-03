@@ -6,6 +6,13 @@ public class TripletSum {
         tripletSum(nums, k);
     }
 
+    /**
+     * The function `tripletSum` takes an array of integers and a target sum as input, and finds all
+     * triplets in the array that add up to the target sum.
+     * 
+     * @param arr An array of integers
+     * @param k The value of k is the target sum that we are looking for in the array.
+     */
     public static void tripletSum(int arr [], int k){
         int n = arr.length;
 
