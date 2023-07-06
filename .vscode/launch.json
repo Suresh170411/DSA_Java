@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Voter",
+            "request": "launch",
+            "mainClass": "Voter",
+            "projectName": "DSA_Java_259932f1"
+        },
+        {
+            "type": "java",
             "name": "SwitchCase",
             "request": "launch",
             "mainClass": "SwitchCase",
