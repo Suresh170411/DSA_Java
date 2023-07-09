@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "PatternMatch",
+            "request": "launch",
+            "mainClass": "PatternMatch",
+            "projectName": "DSA_Java_259932f1"
+        },
+        {
+            "type": "java",
+            "name": "Practice1",
+            "request": "launch",
+            "mainClass": "Practice1",
+            "projectName": "DSA_Java_259932f1"
+        },
+        {
+            "type": "java",
             "name": "Voter",
             "request": "launch",
             "mainClass": "Voter",
