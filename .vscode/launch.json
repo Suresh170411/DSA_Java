@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "PracticePattern",
+            "request": "launch",
+            "mainClass": "PracticePattern",
+            "projectName": "DSA_Java_259932f1"
+        },
+        {
+            "type": "java",
             "name": "PatternMatch",
             "request": "launch",
             "mainClass": "PatternMatch",

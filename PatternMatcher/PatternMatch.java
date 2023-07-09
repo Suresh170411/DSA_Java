@@ -18,6 +18,8 @@ public class PatternMatch{
         }
 
         checkWithWords();
+        System.out.println("===========");
+        checkWithDigits();
     }
 
     public static void checkWithWords(){
