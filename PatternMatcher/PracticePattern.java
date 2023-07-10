@@ -4,6 +4,7 @@ import java.util.regex.Pattern;
 public class PracticePattern {
     public static void main(String[] args) {
         checkWithDigits();
+        checkWithoutDigits();
     }
 
     public static void checkWithDigits(){
@@ -14,8 +15,21 @@ public class PracticePattern {
         Matcher matcher = pattern.matcher(input);
 
         while(matcher.find()){
-            System.out.println(input.substring(matcher.start(), matcher.end()));
+            System.out.print(input.substring(matcher.start(), matcher.end()));
         }
+        System.out.println();
+    }
+
+    public static void checkWithoutDigits(){
+        String input = "1234Hello";
+
+        Pattern patt = Pattern.compile("\\D");
+        Matcher matcher = patt.matcher(input);
+
+        while(matcher.find()){
+            System.out.print(input.substring(matcher.start(), matcher.end()));
+        }
+        System.out.println();
     }
 }
 
