@@ -5,6 +5,7 @@ public class PracticePattern {
     public static void main(String[] args) {
         checkWithDigits();
         checkWithoutDigits();
+        checkWhiteSpace();
     }
 
     public static void checkWithDigits(){
@@ -30,6 +31,20 @@ public class PracticePattern {
             System.out.print(input.substring(matcher.start(), matcher.end()));
         }
         System.out.println();
+    }
+
+    public static void checkWhiteSpace(){
+        String input = "Hello There how are you?";
+
+        Pattern patt = Pattern.compile("\s");
+        Matcher matcher = patt.matcher(input);
+
+        int count = 0;
+
+        while(matcher.find()){
+            count++;
+        }
+        System.out.println("White space is there for " + count + " times");
     }
 }
 
