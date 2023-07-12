@@ -5,6 +5,12 @@ public class Palindrome{
         checkPalindrome(num);
     }
 
+    /**
+     * The function checks if a given number is a palindrome or not.
+     * 
+     * @param num The parameter "num" is an integer that represents the number to be checked for
+     * palindrome.
+     */
     public static void checkPalindrome(int num){
         String str1 = String.valueOf(num);
 
