@@ -24,6 +24,15 @@ public class Spiral {
          */
     }
 
+    /**
+     * The `spiralTraversal` function takes in a 2D array `arr` of size `n` by `m` and prints the
+     * elements of the array in a spiral order.
+     * 
+     * @param n The number of rows in the 2D array.
+     * @param m The number of columns in the array.
+     * @param arr The arr parameter is a 2D array of integers. It represents a matrix with n rows and m
+     * columns.
+     */
     public static void spiralTraversal(int n, int m, int [][] arr){
         int top=0;
         int left=0;
