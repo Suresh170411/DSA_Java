@@ -16,6 +16,12 @@ public class SortHashMapByValue {
         sorthashMapUsingValue(hm);
     }
 
+    /**
+     * The function sorts a HashMap of Student objects based on their marks and prints the details of
+     * each student in ascending order of marks.
+     * 
+     * @param hm The parameter "hm" is a HashMap with String keys and Student values.
+     */
     public static void sorthashMapUsingValue(HashMap<String,Student> hm){
         List<Entry<String,Student>> list = new ArrayList<>(hm.entrySet());
 
