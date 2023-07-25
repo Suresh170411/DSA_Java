@@ -3,9 +3,11 @@ import java.util.HashMap;
 
 public class MissingNumber {
     public static void main(String[] args) {
-        int arr [] = {1,2,3,4,5,5};
+        int arr [] = {1,2,3,5};
 
         findMissingNumberBrutreForce(arr);
+        System.out.println("============");
+        System.out.println(getMissingNum(arr));
     }
 
     public static void findMissingNumberBrutreForce(int arr []){
@@ -34,5 +36,13 @@ public class MissingNumber {
                 return;
             }
         }
+    }
+    public static int getMissingNum(int arr []){
+        int n = arr.length;
+        int sum = ((n + 1) * (n + 2)) / 2;
+        
+        for (int i : arr) sum-= i;
+
+        return sum;
     }
 }
